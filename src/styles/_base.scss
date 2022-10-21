@@ -1,0 +1,32 @@
+// reset
+* {
+  box-sizing: border-box;
+  color: $font-color-primary;
+  font-family: $font-pattern;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $color-primary;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 768px) { 
+  html {
+    font-size: 80%;
+  }
+}
+
+button {
+  cursor: pointer;
+};
+
+a {
+  text-decoration: none;
+};
