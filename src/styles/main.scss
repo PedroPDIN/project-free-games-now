@@ -1,2 +1,8 @@
 @import '_variables.scss';
 @import '_base.scss';
+
+// mixins
+@import '_mixins.scss';
+
+// components
+@import './components/header.module.scss';

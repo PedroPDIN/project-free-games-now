@@ -1,0 +1,7 @@
+@mixin header-layout-filter($display: true) {
+  @if $display {
+    justify-content: center;
+  } @else {
+    justify-content: space-around;
+  }
+}

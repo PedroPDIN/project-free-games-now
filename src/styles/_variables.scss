@@ -1,14 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+// colors
+$color-primary: #3a3f44;
+$color-secondary: #7a8288;
+$black: rgb(8, 8, 8);
+$white: #fff;
+
 // font styles
 $font-color-primary: #7a8288;
 $font-color-secondary: #e9ecef;
 $font-pattern: 'Open Sans', serif !important;
-$font-sm: 576px;
-$font-md: 768px;
-$font-lg: 992px;
-$font-xl: 1200px;
+$font-sm: 20px;
+$font-md: 34px;
+$font-lg: 60px;
+$font-xl: 700px;
 
-// page styles
-$color-primary: #3a3f44;
-$color-secondary: #7a8288;
+// font styles responsive
+$font-sm-rs: 14px;
+$font-md-rs: 20px;
+$font-lg-rs: 30px;
+$font-xl-rs: 50px;
+
+
