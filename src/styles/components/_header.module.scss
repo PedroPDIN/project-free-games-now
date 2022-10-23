@@ -7,67 +7,67 @@
   padding: 5px 0px;
   position: relative;
 
-  .header_content {
-    align-items: center;
-    display: flex;
-    width: 100%;
+    .header_content {
+      align-items: center;
+      display: flex;
+      width: 100%;
 
-    @include mixins.header-layout-filter;
-  };
-
-  .header_content_layout_filter {
-    align-items: center;
-    display: flex;
-    width: 100%;
-
-    @include mixins.header-layout-filter(false);
-  };
-
-  .title_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .icon {
-      font-size: 20px;
-      margin: 0 4px;
-    } 
-
-    .title {
-      font-family: variables.$font-title;
-      font-size: variables.$font-lg;
-      margin: 0 4px;
+      @include mixins.header-layout-filter;
     };
-  }
 
-  .selects_container {
-    display: flex;
-    justify-content: space-between;
-    width: 20%;
+    .header_content_layout_filter {
+      align-items: center;
+      display: flex;
+      width: 100%;
 
-    select {
-      background: none;
-      border: 0;
-      height: 30px;
-      font-size: variables.$font-sm;
-      text-align: center;
+      @include mixins.header-layout-filter(false);
+    };
 
-      &:hover {
-        color: variables.$white;
-      };
+    .title_container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-        option {
-          background: variables.$dark;
-          color: variables.$font-color-secondary;
+        .icon {
+          font-size: 20px;
+          margin: 0 4px;
+        } 
+      
+        .title {
+          font-family: variables.$font-title;
+          font-size: variables.$font-lg;
+          margin: 0 4px;
+        };
+    }
+
+    .selects_container {
+      display: flex;
+      justify-content: space-between;
+      width: 20%;
+
+        select {
+          background: none;
+          border: 0;
+          height: 30px;
+          font-size: variables.$font-sm;
+          text-align: center;
+        
+          &:hover {
+            color: variables.$white;
+          };
+        
+            option {
+              background: variables.$dark;
+              color: variables.$font-color-secondary;
+            };
         };
     };
-  };
-  
-  button {
-    background: none;
-    border: 0;
-    font-size: 20px;
-  };
+
+    button {
+      background: none;
+      border: 0;
+      font-size: 20px;
+    };
 };
 
 // ===================== responsive ===========================
