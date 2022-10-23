@@ -13,7 +13,7 @@
     width: 100%;
 
     @include mixins.header-layout-filter;
-  }
+  };
 
   .header_content_layout_filter {
     align-items: center;
@@ -21,41 +21,110 @@
     width: 100%;
 
     @include mixins.header-layout-filter(false);
+  };
+
+  .title_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+      font-size: 20px;
+      margin: 0 4px;
+    } 
+
+    .title {
+      font-family: variables.$font-title;
+      font-size: variables.$font-lg;
+      margin: 0 4px;
+    };
   }
 
-  .title {
-    font-size: variables.$font-lg;
-  }
+  .selects_container {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
 
-  select {
-    background: none;
-    border: 0;
-    cursor: pointer;
-    height: 30px;
-    font-size: variables.$font-sm;
-    text-align: center;
+    select {
+      background: none;
+      border: 0;
+      height: 30px;
+      font-size: variables.$font-sm;
+      text-align: center;
 
-      option {
-        background: variables.$color-secondary;
-        color: variables.$font-color-secondary;
-      
-      }
-  }
+      &:hover {
+        color: variables.$white;
+      };
 
+        option {
+          background: variables.$dark;
+          color: variables.$font-color-secondary;
+        };
+    };
+  };
+  
   button {
     background: none;
     border: 0;
-    font-size: variables.$font-sm;
-  }
+    font-size: 20px;
+  };
+};
 
-  @media (max-width: 768px) {
-   .title {
-     font-size: variables.$font-md-rs;
-   }
-  }
-}
+// ===================== responsive ===========================
+@media (max-width: 768px) {
+  .header_container {
+    padding: 5px 0px;
 
+    .header_content {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
 
+      @include mixins.header-layout-filter;
+    };
 
+    .header_content_layout_filter {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    
+      @include mixins.header-layout-filter(false);
+    };
 
+    .title_container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
 
+        .icon {
+          font-size: 20px;
+          margin: 0 4px;
+        } 
+
+        .title {
+          font-family: variables.$font-title;
+          font-size: variables.$font-lg;
+          margin: 0 4px;
+        };
+    }
+
+    .selects_container {
+      display: flex;
+      justify-content: center;
+      margin-top: -10px;
+      width: 100%;
+
+        select {
+          margin: 5px;
+          width: 35%;
+        };
+    };
+
+    button {
+      font-size: 16px;
+    };
+  };
+};

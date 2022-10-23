@@ -9,6 +9,10 @@
 
 body {
   background-color: $color-primary;
+
+    select {
+      cursor: pointer;
+    }
 }
 
 @media (max-width: 1080px) {
