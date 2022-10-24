@@ -1,13 +1,15 @@
 import React from 'react';
-// import * as api from './services/Api';
+import { BrowserRouter } from 'react-router-dom';
+import MainRoutes from './routes';
 
-import * as Components from './components';
+// import * as api from './services/Api';
 
 function App() {
   return (
-    <div className="App">
-      <Components.Header filterGames />
-      <h1>Hello word</h1>
+    <div>
+      <BrowserRouter>
+        <MainRoutes />
+      </BrowserRouter>
     </div>
   );
 }
