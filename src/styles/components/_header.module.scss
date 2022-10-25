@@ -1,80 +1,13 @@
 @use '../_variables.scss';
 @use '../_mixins.scss';
 
-.header_container {
-  border-bottom: 1px solid variables.$black;
-  box-shadow: 5px 0px 30px variables.$black;
-  margin-bottom: 50px;
-  padding: 5px 0px;
-  position: relative;
-
-    .header_content {
-      align-items: center;
-      display: flex;
-      width: 100%;
-
-      @include mixins.header-layout-filter;
-    };
-
-    .header_content_layout_filter {
-      align-items: center;
-      display: flex;
-      width: 100%;
-
-      @include mixins.header-layout-filter(false);
-    };
-
-    .title_container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-        .icon {
-          font-size: 20px;
-          margin: 0 4px;
-        } 
-      
-        .title {
-          font-family: variables.$font-title;
-          font-size: 30px;
-          margin: 0 4px;
-        };
-    }
-
-    .selects_container {
-      display: flex;
-      justify-content: space-between;
-      width: 20%;
-
-        select {
-          background: none;
-          border: 0;
-          height: 30px;
-          font-size: 12px;
-          text-align: center;
-        
-          &:hover {
-            color: variables.$white;
-          };
-        
-            option {
-              background: variables.$dark;
-              color: variables.$font-color-secondary;
-            };
-        };
-    };
-
-    button {
-      background: none;
-      border: 0;
-      font-size: 20px;
-    };
-};
-
-// ===================== responsive ===========================
-@media (max-width: 768px) {
+@media (max-width: variables.$breakpoint-sm) {
   .header_container {
+    border-bottom: 1px solid variables.$black;
+    box-shadow: 5px 0px 30px variables.$black;
+    margin-bottom: 40px;
     padding: 5px 0px;
+    position: relative;
 
     .header_content {
       align-items: center;
@@ -99,33 +32,306 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-
-        .icon {
-          font-size: 30px;
-          margin: 0 4px;
-        } 
-
-        .title {
-          font-family: variables.$font-title;
-          font-size: 30px;
-          margin: 0 4px;
-        };
-    }
+      
+      .icon {
+        font-size: 30px;
+        margin: 0 4px;
+      };
+      
+      .title {
+        color: variables.$white;
+        font-family: variables.$font-title;
+        font-size: 30px;
+        margin: 0 4px;
+      };
+    };
 
     .selects_container {
       display: flex;
       justify-content: center;
-      margin-top: -10px;
       width: 100%;
 
-        select {
-          margin: 5px;
-          width: 35%;
+      select {
+        background: none;
+        border: 0;
+        height: 30px;
+        font-size: 14px;
+        text-align: center;
+        width: 100px;
+      
+        &:hover {
+          color: variables.$white;
         };
+
+        option {
+          background: variables.$dark;
+          color: variables.$font-color-secondary;
+        };
+      };
     };
 
     button {
-      font-size: 16px;
+      background: none;
+      border: 0;
+      font-size: 20px;
+      margin-top: 6px;
+
+      &:hover {
+        color: variables.$white;
+      };
+    };
+  };
+};
+
+@media (min-width: variables.$breakpoint-md) {
+  .header_container {
+    border-bottom: 1px solid variables.$black;
+    box-shadow: 5px 0px 30px variables.$black;
+    margin-bottom: 40px;
+    padding: 5px 0px;
+    position: relative;
+
+    .header_content {
+      align-items: center;
+      display: flex;
+      width: 100%;
+
+      @include mixins.header-layout-filter;
+
+      .title_container {
+        justify-content: flex-start;
+      }
+    };
+
+    .header_content_layout_filter {
+      align-items: center;
+      display: flex;
+      width: 100%;
+    
+      @include mixins.header-layout-filter(false);
+    };
+
+    .title_container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      
+      .icon {
+        font-size: 30px;
+        margin: 0 4px;
+      };
+      
+      .title {
+        color: variables.$white;
+        font-family: variables.$font-title;
+        font-size: 30px;
+        margin-right: 80px;
+      };
+    };
+
+    .selects_container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      select {
+        background: none;
+        border: 0;
+        height: 30px;
+        font-size: 16px;
+        text-align: center;
+        width: 120px;
+      
+        &:hover {
+          color: variables.$white;
+        };
+
+        option {
+          background: variables.$dark;
+          color: variables.$font-color-secondary;
+        };
+      };
+    };
+
+    button {
+      background: none;
+      border: 0;
+      font-size: 20px;
+      margin: 6px 50px 0px 0px;
+
+      &:hover {
+        color: variables.$white;
+      };
+    };
+  };
+};
+
+@media (min-width: variables.$breakpoint-lg) {
+  .header_container {
+    border-bottom: 1px solid variables.$black;
+    box-shadow: 5px 0px 30px variables.$black;
+    margin-bottom: 40px;
+    padding: 5px 0px;
+    position: relative;
+
+    .header_content {
+      align-items: center;
+      display: flex;
+      width: 100%;
+
+      @include mixins.header-layout-filter;
+
+      .title_container {
+        justify-content: flex-start;
+      }
+    };
+
+    .header_content_layout_filter {
+      align-items: center;
+      display: flex;
+      width: 100%;
+    
+      @include mixins.header-layout-filter(false);
+    };
+
+    .title_container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      
+      .icon {
+        font-size: 30px;
+        margin: 0 4px;
+      };
+      
+      .title {
+        color: variables.$white;
+        font-family: variables.$font-title;
+        font-size: 30px;
+        margin-right: 80px;
+      };
+    };
+
+    .selects_container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      select {
+        background: none;
+        border: 0;
+        height: 30px;
+        font-size: 17px;
+        text-align: center;
+        width: 124px;
+      
+        &:hover {
+          color: variables.$white;
+        };
+
+        option {
+          background: variables.$dark;
+          color: variables.$font-color-secondary;
+        };
+      };
+    };
+
+    button {
+      background: none;
+      border: 0;
+      font-size: 24px;
+      margin: 6px 50px 0px 0px;
+
+      &:hover {
+        color: variables.$white;
+      };
+    };
+  };
+};
+
+@media (min-width: variables.$breakpoint-xl) {
+  .header_container {
+    border-bottom: 1px solid variables.$black;
+    box-shadow: 5px 0px 30px variables.$black;
+    margin-bottom: 40px;
+    padding: 5px 0px;
+    position: relative;
+
+    .header_content {
+      align-items: center;
+      display: flex;
+      width: 100%;
+
+      @include mixins.header-layout-filter;
+
+      .title_container {
+        justify-content: flex-start;
+      }
+    };
+
+    .header_content_layout_filter {
+      align-items: center;
+      display: flex;
+      width: 100%;
+    
+      @include mixins.header-layout-filter(false);
+    };
+
+    .title_container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-left: 8%;
+      width: 100%;
+    
+      .icon {
+        font-size: 30px;
+        margin: 0 4px;
+      };
+      
+      .title {
+        color: variables.$white;
+        font-family: variables.$font-title;
+        font-size: 30px;
+        margin-right: 80px;
+      };
+    };
+
+    .selects_container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      select {
+        background: none;
+        border: 0;
+        height: 30px;
+        font-size: 17px;
+        text-align: center;
+        width: 124px;
+      
+        &:hover {
+          color: variables.$white;
+        };
+
+        option {
+          background: variables.$dark;
+          color: variables.$font-color-secondary;
+        };
+      };
+    };
+
+    button {
+      background: none;
+      border: 0;
+      font-size: 24px;
+      margin: 6px 6% 0px 0px;
+
+      &:hover {
+        color: variables.$white;
+      };
     };
   };
 };

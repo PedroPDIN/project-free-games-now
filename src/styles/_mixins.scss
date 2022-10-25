@@ -1,8 +1,8 @@
 @mixin header-layout-filter($display: true) {
   @if $display {
-    justify-content: space-evenly;
-  } @else {
     justify-content: space-between;
     padding: 0 8%;
+  } @else {
+    justify-content: center
   }
 }
