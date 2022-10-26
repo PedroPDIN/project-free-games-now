@@ -1,6 +1,7 @@
 import Header from './Header';
+import CardsGames from './CardsGames';
 
 export {
-  // eslint-disable-next-line import/prefer-default-export
   Header,
+  CardsGames,
 };

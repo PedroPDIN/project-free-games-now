@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { HiSearchCircle } from 'react-icons/hi';
 import MainContext from '../../store/Context/Main.Context';
-import * as Components from '../../components';
 import { IGame } from '../../interfaces/Game.interface';
+import * as Components from '../../components';
 
 import style from '../../styles/components/_search.module.scss';
 
@@ -53,9 +53,7 @@ function Search() {
           </div>
 
         </section>
-        {searchGame.map((game) => (
-          <div key={ game.id }>{ game.title }</div>
-        ))}
+        <Components.CardsGames games={ searchGame } cardFormat="mini" />
         <section />
       </main>
     </>
