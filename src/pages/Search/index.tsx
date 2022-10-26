@@ -12,7 +12,7 @@ function Search() {
 
   const { listGames } = useContext(MainContext);
 
-  const getFilterGame = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleChangeGame = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setSearchInput(e.target.value);
   };
 
@@ -48,7 +48,7 @@ function Search() {
               placeholder="Digite aqui!"
               type="text"
               value={ searchInput }
-              onChange={ getFilterGame }
+              onChange={ handleChangeGame }
             />
           </div>
 
