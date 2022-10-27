@@ -3,6 +3,8 @@ import { IoMdBrowsers } from 'react-icons/io';
 import { DiWindows } from 'react-icons/di';
 import { IGame } from '../../interfaces/Game.interface';
 
+import style from '../../styles/components/_cardsGames.module.scss';
+
 interface Props {
   games: IGame[];
   cardFormat: 'mini' | 'base';
@@ -14,25 +16,25 @@ function CardsGames({ games, cardFormat }: Props) {
       {cardFormat === 'base' ? (
         <h1>Formato base em desenvolvimento....</h1>
       ) : (
-        <div>
+        <div className={ style.card_container_mini }>
           {
             games.map((game) => (
-              <div>
+              <div className={ style.card_content_mini }>
                 <img src={ game.thumbnail } alt={ game.title } />
 
-                <div>
+                <div className={ style.title_content }>
                   <h3>{game.title}</h3>
                   <span>FREE</span>
                 </div>
 
-                <p>{game.short_description}</p>
+                <p className={ style.description }>{game.short_description}</p>
 
-                <div>
-                  {game.genre}
+                <div className={ style.info_game_content }>
+                  <span>{game.genre}</span>
                   {game.platform === 'PC (Windows)' ? (
-                    <DiWindows />
+                    <DiWindows className={ style.icon } />
                   ) : (
-                    <IoMdBrowsers />
+                    <IoMdBrowsers className={ style.icon } />
                   )}
                 </div>
               </div>

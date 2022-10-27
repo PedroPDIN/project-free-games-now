@@ -3,6 +3,8 @@
 @media (max-width: variables.$breakpoint-sm) {
   .search_container {
     .filter_container  {
+      margin-bottom: 32px;
+
       .filter_content {
         display: flex;
         align-items: center;
@@ -46,6 +48,8 @@
 @media (min-width: variables.$breakpoint-md) {
   .search_container {
     .filter_container  {
+      margin-bottom: 38px;
+
       .filter_content {
         display: flex;
         align-items: center;
@@ -89,6 +93,8 @@
 @media (min-width: variables.$breakpoint-lg) {
   .search_container {
     .filter_container  {
+      margin-bottom: 40px;
+
       .filter_content {
         display: flex;
         align-items: center;
@@ -131,7 +137,9 @@
 
 @media (min-width: variables.$breakpoint-xl) {
   .search_container {
-    .filter_container  {
+    .filter_container {
+      margin-bottom: 40px;
+
       .filter_content {
         display: flex;
         align-items: center;

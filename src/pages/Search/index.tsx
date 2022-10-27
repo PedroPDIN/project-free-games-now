@@ -4,7 +4,7 @@ import MainContext from '../../store/Context/Main.Context';
 import { IGame } from '../../interfaces/Game.interface';
 import * as Components from '../../components';
 
-import style from '../../styles/components/_search.module.scss';
+import style from '../../styles/pages/_search.module.scss';
 
 function Search() {
   const [searchInput, setSearchInput] = useState<string>('');
