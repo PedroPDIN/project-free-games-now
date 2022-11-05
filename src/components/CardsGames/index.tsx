@@ -19,7 +19,10 @@ function CardsGames({ games, cardFormat }: Props) {
         <div className={ style.card_container_mini }>
           {
             games.map((game) => (
-              <div className={ style.card_content_mini }>
+              <a
+                href={ game.game_url }
+                className={ style.card_content_mini }
+              >
                 <img src={ game.thumbnail } alt={ game.title } />
 
                 <div className={ style.title_content }>
@@ -37,7 +40,7 @@ function CardsGames({ games, cardFormat }: Props) {
                     <IoMdBrowsers className={ style.icon } />
                   )}
                 </div>
-              </div>
+              </a>
             ))
           }
         </div>

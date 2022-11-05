@@ -55,6 +55,10 @@ function Search() {
         </section>
         <Components.CardsGames games={ searchGame } cardFormat="mini" />
         <section />
+
+        <section>
+          <Components.CardsGamesLike hasTitle />
+        </section>
       </main>
     </>
 
