@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FiSearch } from 'react-icons/fi';
 import { SiGamejolt } from 'react-icons/si';
 import categories from '../../services/GameCategories';
@@ -11,6 +12,7 @@ interface Props {
 
 function Header({ filterGames }: Props) {
   const tenCategories: string[] = categories.slice(0, 10);
+  const navigate = useNavigate();
 
   return (
     <header className={ style.header_container }>
@@ -41,7 +43,10 @@ function Header({ filterGames }: Props) {
               </select>
             </div>
 
-            <button type="button">
+            <button
+              type="button"
+              onClick={ () => navigate('/search') }
+            >
               <FiSearch />
             </button>
           </div>
@@ -55,7 +60,10 @@ function Header({ filterGames }: Props) {
               </h1>
             </div>
 
-            <button type="button">
+            <button
+              type="button"
+              onClick={ () => navigate('/search') }
+            >
               <FiSearch />
             </button>
           </div>
