@@ -1,54 +1,10 @@
 @use '../_variables.scss';
 
-@media (max-width: variables.$breakpoint-sm) {
+// ============================ big monitors ===============================
+@media (min-width: variables.$breakpoint-lg) {
   .search_container {
-    .filter_container  {
-      margin-bottom: 32px;
-
-      .filter_content {
-        display: flex;
-        align-items: center;
-        width: 100%;
-
-        .icon {
-          font-size: 35px;
-          margin: 0px 3px 0px 10px;
-        };
-
-        .title {
-          font-size: 20px;
-          margin-left: 3px;
-        };
-      };
-
-      hr {
-        border: 0;
-        border-top: 2px solid variables.$break-color-primary;
-        margin: 10px 6px;
-      };
-
-      .input_filter {
-        display: flex;
-        justify-content: center;
-     
-        input {
-          background: variables.$dark;
-          border: 0;
-          border-radius: 6px;
-          color: variables.$color-secondary;
-          font-size: 100%;
-          padding: 10px;
-          width: 90%;
-        };
-      };
-    };
-  };
-};
-
-@media (min-width: variables.$breakpoint-md) {
-  .search_container {
-    .filter_container  {
-      margin-bottom: 38px;
+    .filter_container {
+      margin-bottom: 40px;
 
       .filter_content {
         display: flex;
@@ -57,7 +13,7 @@
 
         .icon {
           font-size: 40px;
-          margin: 0px 3px 0px 20px;
+          margin: 0px 3px 0px 30px;
         };
 
         .title {
@@ -74,8 +30,8 @@
 
       .input_filter {
         display: flex;
-        margin-left: 40px;
-
+        margin-left: 60px;
+     
         input {
           background: variables.$dark;
           border: 0;
@@ -83,14 +39,15 @@
           color: variables.$color-secondary;
           font-size: 100%;
           padding: 10px;
-          width: 70%;
+          width: 40%;
         };
       };
     };
   };
-};
+}
 
-@media (min-width: variables.$breakpoint-lg) {
+// ================ notebooks and tablets in landscape mode ================
+@media (max-width: variables.$breakpoint-lg) {
   .search_container {
     .filter_container  {
       margin-bottom: 40px;
@@ -135,10 +92,11 @@
   };
 };
 
-@media (min-width: variables.$breakpoint-xl) {
+// ==== tablets in portrait mode and smartphones in landscape mode =========
+@media (max-width: variables.$breakpoint-md) {
   .search_container {
-    .filter_container {
-      margin-bottom: 40px;
+    .filter_container  {
+      margin-bottom: 38px;
 
       .filter_content {
         display: flex;
@@ -147,7 +105,7 @@
 
         .icon {
           font-size: 40px;
-          margin: 0px 3px 0px 30px;
+          margin: 0px 3px 0px 20px;
         };
 
         .title {
@@ -164,8 +122,8 @@
 
       .input_filter {
         display: flex;
-        margin-left: 60px;
-     
+        margin-left: 40px;
+
         input {
           background: variables.$dark;
           border: 0;
@@ -173,7 +131,54 @@
           color: variables.$color-secondary;
           font-size: 100%;
           padding: 10px;
-          width: 40%;
+          width: 70%;
+        };
+      };
+    };
+  };
+};
+
+// =================== smartphones in portrait mode ========================
+@media (max-width: variables.$breakpoint-sm) {
+  .search_container {
+    .filter_container  {
+      margin-bottom: 32px;
+
+      .filter_content {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        .icon {
+          font-size: 35px;
+          margin: 0px 3px 0px 10px;
+        };
+
+        .title {
+          font-size: 20px;
+          margin-left: 3px;
+        };
+      };
+
+      hr {
+        border: 0;
+        border-top: 2px solid variables.$break-color-primary;
+        margin: 10px 6px;
+      };
+
+      .input_filter {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+
+        input {
+          background: variables.$dark;
+          border: 0;
+          border-radius: 6px;
+          color: variables.$color-secondary;
+          font-size: 100%;
+          padding: 10px;
+          width: 90%;
         };
       };
     };
