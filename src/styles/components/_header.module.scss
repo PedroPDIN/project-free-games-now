@@ -1,172 +1,7 @@
 @use '../_variables.scss';
 @use '../_mixins.scss';
 
-@media (max-width: variables.$breakpoint-sm) {
-  .header_container {
-    border-bottom: 1px solid variables.$black;
-    box-shadow: 5px 0px 30px variables.$black;
-    margin-bottom: 40px;
-    padding: 5px 0px;
-    position: relative;
-
-    .header_content {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-
-      @include mixins.header-layout-filter;
-    };
-
-    .header_content_layout_filter {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    
-      @include mixins.header-layout-filter(false);
-    };
-
-    .title_container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      
-      .icon {
-        font-size: 30px;
-        margin: 0 4px;
-      };
-      
-      .title {
-        color: variables.$white-secondary;
-        font-family: variables.$font-title;
-        font-size: 30px;
-        margin: 0 4px;
-      };
-    };
-
-    .selects_container {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-
-      select {
-        background: none;
-        border: 0;
-        height: 30px;
-        font-size: 14px;
-        text-align: center;
-        width: 100px;
-      
-        &:hover {
-          color: variables.$white-primary;
-        };
-
-        option {
-          background: variables.$dark;
-          color: variables.$font-color-secondary;
-        };
-      };
-    };
-
-    button {
-      background: none;
-      border: 0;
-      font-size: 20px;
-      margin-top: 6px;
-
-      &:hover {
-        color: variables.$white-primary;
-      };
-    };
-  };
-};
-
-@media (min-width: variables.$breakpoint-md) {
-  .header_container {
-    border-bottom: 1px solid variables.$black;
-    box-shadow: 5px 0px 30px variables.$black;
-    margin-bottom: 40px;
-    padding: 5px 0px;
-    position: relative;
-
-    .header_content {
-      align-items: center;
-      display: flex;
-      width: 100%;
-
-      @include mixins.header-layout-filter;
-
-      .title_container {
-        justify-content: flex-start;
-      }
-    };
-
-    .header_content_layout_filter {
-      align-items: center;
-      display: flex;
-      width: 100%;
-    
-      @include mixins.header-layout-filter(false);
-    };
-
-    .title_container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      
-      .icon {
-        font-size: 30px;
-        margin: 0 4px;
-      };
-      
-      .title {
-        color: variables.$white-secondary;
-        font-family: variables.$font-title;
-        font-size: 30px;
-        margin-right: 80px;
-      };
-    };
-
-    .selects_container {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-
-      select {
-        background: none;
-        border: 0;
-        height: 30px;
-        font-size: 16px;
-        text-align: center;
-        width: 120px;
-      
-        &:hover {
-          color: variables.$white-primary;
-        };
-
-        option {
-          background: variables.$dark;
-          color: variables.$font-color-secondary;
-        };
-      };
-    };
-
-    button {
-      background: none;
-      border: 0;
-      font-size: 20px;
-      margin: 6px 50px 0px 0px;
-
-      &:hover {
-        color: variables.$white-primary;
-      };
-    };
-  };
-};
-
+// ============================ big monitors ===============================
 @media (min-width: variables.$breakpoint-lg) {
   .header_container {
     border-bottom: 1px solid variables.$black;
@@ -183,8 +18,58 @@
       @include mixins.header-layout-filter;
 
       .title_container {
+        display: flex;
+        align-items: center;
         justify-content: flex-start;
-      }
+        width: 100%;
+        
+        .icon {
+          font-size: 30px;
+          margin: 0 4px;
+        };
+
+        .title {
+          color: variables.$white-secondary;
+          font-family: variables.$font-title;
+          font-size: 30px;
+          margin-right: 80px;
+        };
+      };
+
+      .selects_container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        select {
+          background: none;
+          border: 0;
+          height: 30px;
+          font-size: 17px;
+          text-align: center;
+          width: 124px;
+        
+          &:hover {
+            color: variables.$white-primary;
+          };
+
+          option {
+            background: variables.$dark;
+            color: variables.$font-color-secondary;
+          };
+        };
+      };
+
+      button {
+        background: none;
+        border: 0;
+        font-size: 24px;
+        margin: 6px 6% 0px 0px;
+
+        &:hover {
+          color: variables.$white-primary;
+        };
+      };
     };
 
     .header_content_layout_filter {
@@ -193,65 +78,67 @@
       width: 100%;
     
       @include mixins.header-layout-filter(false);
-    };
 
-    .title_container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      
-      .icon {
-        font-size: 30px;
-        margin: 0 4px;
+      .title_container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 8%;
+        width: 100%;
+    
+        .icon {
+          font-size: 30px;
+          margin: 0 4px;
+        };
+
+        .title {
+          color: variables.$white-secondary;
+          font-family: variables.$font-title;
+          font-size: 30px;
+          margin-right: 80px;
+        };
       };
-      
-      .title {
-        color: variables.$white-secondary;
-        font-family: variables.$font-title;
-        font-size: 30px;
-        margin-right: 80px;
+
+      .selects_container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        select {
+          background: none;
+          border: 0;
+          height: 30px;
+          font-size: 17px;
+          text-align: center;
+          width: 124px;
+        
+          &:hover {
+            color: variables.$white-primary;
+          };
+
+          option {
+            background: variables.$dark;
+            color: variables.$font-color-secondary;
+          };
+        };
       };
-    };
 
-    .selects_container {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-
-      select {
+      button {
         background: none;
         border: 0;
-        height: 30px;
-        font-size: 17px;
-        text-align: center;
-        width: 124px;
-      
+        font-size: 24px;
+        margin: 6px 6% 0px 0px;
+
         &:hover {
           color: variables.$white-primary;
         };
-
-        option {
-          background: variables.$dark;
-          color: variables.$font-color-secondary;
-        };
-      };
-    };
-
-    button {
-      background: none;
-      border: 0;
-      font-size: 24px;
-      margin: 6px 50px 0px 0px;
-
-      &:hover {
-        color: variables.$white-primary;
       };
     };
   };
 };
 
-@media (min-width: variables.$breakpoint-xl) {
+// ================ notebooks and tablets in landscape mode ================
+@media (max-width: variables.$breakpoint-lg) {
   .header_container {
     border-bottom: 1px solid variables.$black;
     box-shadow: 5px 0px 30px variables.$black;
@@ -267,8 +154,58 @@
       @include mixins.header-layout-filter;
 
       .title_container {
+        display: flex;
+        align-items: center;
         justify-content: flex-start;
-      }
+        width: 100%;
+        
+        .icon {
+          font-size: 30px;
+          margin: 0 4px;
+        };
+
+        .title {
+          color: variables.$white-secondary;
+          font-family: variables.$font-title;
+          font-size: 30px;
+          margin-right: 80px;
+        };
+      };
+
+      .selects_container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        select {
+          background: none;
+          border: 0;
+          height: 30px;
+          font-size: 17px;
+          text-align: center;
+          width: 124px;
+        
+          &:hover {
+            color: variables.$white-primary;
+          };
+
+          option {
+            background: variables.$dark;
+            color: variables.$font-color-secondary;
+          };
+        };
+      };
+
+      button {
+        background: none;
+        border: 0;
+        font-size: 24px;
+        margin: 6px 50px 0px 0px;
+
+        &:hover {
+          color: variables.$white-primary;
+        };
+      };
     };
 
     .header_content_layout_filter {
@@ -277,15 +214,13 @@
       width: 100%;
     
       @include mixins.header-layout-filter(false);
-    };
 
-    .title_container {
+      .title_container {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      margin-left: 8%;
+      justify-content: center;
       width: 100%;
-    
+      
       .icon {
         font-size: 30px;
         margin: 0 4px;
@@ -299,38 +234,319 @@
       };
     };
 
-    .selects_container {
-      display: flex;
-      justify-content: center;
-      width: 100%;
+      .selects_container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
 
-      select {
+        select {
+          background: none;
+          border: 0;
+          height: 30px;
+          font-size: 17px;
+          text-align: center;
+          width: 124px;
+        
+          &:hover {
+            color: variables.$white-primary;
+          };
+
+          option {
+            background: variables.$dark;
+            color: variables.$font-color-secondary;
+          };
+        };
+      };
+
+      button {
         background: none;
         border: 0;
-        height: 30px;
-        font-size: 17px;
-        text-align: center;
-        width: 124px;
-      
+        font-size: 24px;
+        margin: 6px 50px 0px 0px;
+
         &:hover {
           color: variables.$white-primary;
         };
+      };
+    };
+  };
+};
 
-        option {
-          background: variables.$dark;
-          color: variables.$font-color-secondary;
+// ==== tablets in portrait mode and smartphones in landscape mode =========
+@media (max-width: variables.$breakpoint-md) {
+  .header_container {
+    border-bottom: 1px solid variables.$black;
+    box-shadow: 5px 0px 30px variables.$black;
+    margin-bottom: 40px;
+    padding: 5px 0px;
+    position: relative;
+
+    .header_content {
+      align-items: center;
+      display: flex;
+      width: 100%;
+
+      @include mixins.header-layout-filter;
+
+      .title_container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        
+        .icon {
+          font-size: 30px;
+          margin: 0 4px;
+        };
+
+        .title {
+          color: variables.$white-secondary;
+          font-family: variables.$font-title;
+          font-size: 30px;
+          margin-right: 80px;
+        };
+      };
+
+      .selects_container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        select {
+          background: none;
+          border: 0;
+          height: 30px;
+          font-size: 16px;
+          text-align: center;
+          width: 120px;
+        
+          &:hover {
+            color: variables.$white-primary;
+          };
+
+          option {
+            background: variables.$dark;
+            color: variables.$font-color-secondary;
+          };
+        };
+      };
+
+      button {
+        background: none;
+        border: 0;
+        font-size: 20px;
+        margin: 6px 50px 0px 0px;
+
+        &:hover {
+          color: variables.$white-primary;
         };
       };
     };
 
-    button {
-      background: none;
-      border: 0;
-      font-size: 24px;
-      margin: 6px 6% 0px 0px;
+    .header_content_layout_filter {
+      align-items: center;
+      display: flex;
+      width: 100%;
+    
+      @include mixins.header-layout-filter(false);
 
-      &:hover {
-        color: variables.$white-primary;
+      .title_container {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        white-space: nowrap;
+        
+        .icon {
+          font-size: 30px;
+          margin: 0 4px;
+        };
+
+        .title {
+          color: variables.$white-secondary;
+          font-family: variables.$font-title;
+          font-size: 30px;
+          margin: 0;
+          white-space: nowrap;
+        };
+      };
+
+      .selects_container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        select {
+          background: none;
+          border: 0;
+          height: 30px;
+          font-size: 16px;
+          text-align: center;
+          width: 120px;
+        
+          &:hover {
+            color: variables.$white-primary;
+          };
+
+          option {
+            background: variables.$dark;
+            color: variables.$font-color-secondary;
+          };
+        };
+      };
+
+      button {
+        background: none;
+        border: 0;
+        font-size: 20px;
+        margin: 6px 50px 0px 0px;
+
+        &:hover {
+          color: variables.$white-primary;
+        };
+      };
+    };    
+  };
+};
+
+// =================== smartphones in portrait mode ========================
+@media (max-width: variables.$breakpoint-sm) {
+  .header_container {
+    border-bottom: 1px solid variables.$black;
+    box-shadow: 5px 0px 30px variables.$black;
+    margin-bottom: 40px;
+    padding: 5px 0px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+
+    .header_content {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      @include mixins.header-layout-filter;
+
+      .title_container {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        
+        .icon {
+          font-size: 30px;
+          margin: 0 4px;
+        };
+
+        .title {
+          color: variables.$white-secondary;
+          font-family: variables.$font-title;
+          font-size: 30px;
+          margin: 0 4px;
+        };
+      };
+
+      .selects_container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        select {
+          background: none;
+          border: 0;
+          height: 30px;
+          font-size: 14px;
+          text-align: center;
+          width: 100px;
+        
+          &:hover {
+            color: variables.$white-primary;
+          };
+
+          option {
+            background: variables.$dark;
+            color: variables.$font-color-secondary;
+          };
+        };
+      };
+
+      button {
+        background: none;
+        border: 0;
+        font-size: 20px;
+        margin: 0;
+        margin-top: 6px;
+        width: 100%;
+
+        &:hover {
+          color: variables.$white-primary;
+        };
+      };
+    };
+
+    .header_content_layout_filter {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    
+      @include mixins.header-layout-filter(false);
+
+      .title_container {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        
+        .icon {
+          font-size: 30px;
+          margin: 0 4px;
+        };
+
+        .title {
+          color: variables.$white-secondary;
+          font-family: variables.$font-title;
+          font-size: 30px;
+          margin: 0 4px;
+        };
+      };
+
+      .selects_container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        select {
+          background: none;
+          border: 0;
+          height: 30px;
+          font-size: 14px;
+          text-align: center;
+          width: 100px;
+        
+          &:hover {
+            color: variables.$white-primary;
+          };
+
+          option {
+            background: variables.$dark;
+            color: variables.$font-color-secondary;
+          };
+        };
+      };
+
+      button {
+        background: none;
+        border: 0;
+        font-size: 20px;
+        margin: 0;
+        margin-top: 6px;
+        width: 100%;
+
+        &:hover {
+          color: variables.$white-primary;
+        };
       };
     };
   };
