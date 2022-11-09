@@ -4,11 +4,14 @@
 // ============================ big monitors ===============================
 @media (min-width: variables.$breakpoint-lg) {
   .header_container {
+    background-color: variables.$color-primary;
     border-bottom: 1px solid variables.$black;
     box-shadow: 5px 0px 30px variables.$black;
     margin-bottom: 40px;
     padding: 5px 0px;
     position: relative;
+    position: sticky;
+    top: 0;
 
     .header_content {
       align-items: center;
@@ -140,11 +143,14 @@
 // ================ notebooks and tablets in landscape mode ================
 @media (max-width: variables.$breakpoint-lg) {
   .header_container {
+    background-color: variables.$color-primary;
     border-bottom: 1px solid variables.$black;
     box-shadow: 5px 0px 30px variables.$black;
     margin-bottom: 40px;
     padding: 5px 0px;
     position: relative;
+    position: sticky;
+    top: 0;
 
     .header_content {
       align-items: center;
@@ -272,14 +278,17 @@
   };
 };
 
-// ==== tablets in portrait mode and smartphones in landscape mode =========
+// ====== tablets in portrait mode and smartphones in landscape mode =======
 @media (max-width: variables.$breakpoint-md) {
   .header_container {
+    background-color: variables.$color-primary;
     border-bottom: 1px solid variables.$black;
     box-shadow: 5px 0px 30px variables.$black;
     margin-bottom: 40px;
     padding: 5px 0px;
     position: relative;
+    position: sticky;
+    top: 0;
 
     .header_content {
       align-items: center;
@@ -411,6 +420,7 @@
 // =================== smartphones in portrait mode ========================
 @media (max-width: variables.$breakpoint-sm) {
   .header_container {
+    background-color: variables.$color-primary;
     border-bottom: 1px solid variables.$black;
     box-shadow: 5px 0px 30px variables.$black;
     margin-bottom: 40px;

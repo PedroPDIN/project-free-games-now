@@ -6,11 +6,11 @@ import { IGame } from '../../interfaces/Game.interface';
 import style from '../../styles/components/_cardsGames.module.scss';
 
 interface Props {
-  games: IGame[];
+  listGames: IGame[];
   cardFormat: 'mini' | 'base';
 }
 
-function CardsGames({ games, cardFormat }: Props) {
+function CardsGames({ listGames, cardFormat }: Props) {
   return (
     <article>
       {cardFormat === 'base' ? (
@@ -18,30 +18,30 @@ function CardsGames({ games, cardFormat }: Props) {
       ) : (
         <div className={ style.card_container_mini }>
           {
-            games.map((game) => (
-              <a
-                href={ game.game_url }
-                className={ style.card_content_mini }
-              >
-                <img src={ game.thumbnail } alt={ game.title } />
+              listGames.map((game) => (
+                <a
+                  href={ game.game_url }
+                  className={ style.card_content_mini }
+                >
+                  <img src={ game.thumbnail } alt={ game.title } />
 
-                <div className={ style.title_content }>
-                  <h3>{game.title}</h3>
-                  <span>FREE</span>
-                </div>
+                  <div className={ style.title_content }>
+                    <h3>{game.title}</h3>
+                    <span>FREE</span>
+                  </div>
 
-                <p className={ style.description }>{game.short_description}</p>
+                  <p className={ style.description }>{game.short_description}</p>
 
-                <div className={ style.info_game_content }>
-                  <span>{game.genre}</span>
-                  {game.platform === 'PC (Windows)' ? (
-                    <DiWindows className={ style.icon } />
-                  ) : (
-                    <IoMdBrowsers className={ style.icon } />
-                  )}
-                </div>
-              </a>
-            ))
+                  <div className={ style.info_game_content }>
+                    <span>{game.genre}</span>
+                    {game.platform === 'PC (Windows)' ? (
+                      <DiWindows className={ style.icon } />
+                    ) : (
+                      <IoMdBrowsers className={ style.icon } />
+                    )}
+                  </div>
+                </a>
+              ))
           }
         </div>
       )}
