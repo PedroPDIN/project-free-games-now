@@ -15,12 +15,12 @@ function CardsGamesLike({ hasTitle }: Props) {
       <h1 className={ style.title }>Você pode gostar</h1>
 
       {hasTitle ? (
-        <div>
+        <div className={ style.card_container_happy_title }>
           {gamesLike.map((game) => (
             <a
               key={ game.id }
               href={ game.game_url }
-              className={ style.card_container_happy_title }
+              className={ style.card_content_happy_title }
             >
               <img src={ game.thumbnail } alt={ game.title } />
 
