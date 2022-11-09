@@ -1,8 +1,21 @@
+@use './variables';
+
 @mixin header-layout-filter($display: true) {
   @if $display {
-    justify-content: space-evenly;
-  } @else {
     justify-content: space-between;
     padding: 0 8%;
+  } @else {
+    justify-content: center
   }
+}
+
+@mixin icon_free() {
+  background: variables.$blue-primary;
+  border-radius: 7px;
+  color: variables.$white-primary;
+  font-weight: 900;
+  margin-left: 2px;
+  padding: 4px;
+  text-align: center;
+  width: 50px;
 }

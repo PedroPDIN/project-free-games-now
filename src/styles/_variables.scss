@@ -4,24 +4,20 @@
 // colors
 $color-primary: #3a3f44;
 $color-secondary: #7a8288;
+$break-color-primary: rgba(94,84,84,.1);
 $dark: #272b30;
 $black: rgb(8, 8, 8);
-$white: #fff;
+$blue-primary: #4799eb;
+$white-primary: #fff;
+$white-secondary: rgb(190, 189, 189);
+
+// breakpoints
+$breakpoint-sm: 480px;
+$breakpoint-md: 991px;
+$breakpoint-lg: 1200px;
 
 // font styles
 $font-color-primary: #7a8288;
 $font-color-secondary: #e9ecef;
 $font-title: 'Shadows Into Light', serif;
 $font-pattern: 'Open Sans', serif;
-$font-sm: 14px;
-$font-md: 17px;
-$font-lg: 30px;
-$font-xl: 50px;
-
-
-// font styles responsive
-$font-sm-rs: 14px;
-$font-md-rs: 25px;
-$font-lg-rs: 32px;
-$font-xl-rs: 45px;
-

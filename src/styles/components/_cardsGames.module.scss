@@ -1,0 +1,401 @@
+@use '../_variables.scss';
+@use '../_mixins.scss';
+
+// ============================ big monitors ===============================
+@media (min-width: variables.$breakpoint-lg) {
+// mini layout ====================>
+  .card_container_mini {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 70px;
+
+    // background: red;
+    .card_content_mini {
+      align-items: center;
+      background: variables.$dark;
+      border-radius: 6px;
+      box-shadow: 0px 0px 30px 8px variables.$dark;
+      display: flex;
+      flex-direction: column;
+      margin: 10px 10px 16px 10px;
+      transition: all 0.2s ease-in-out;
+      width: 22%;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      img {
+        border-radius: 10px 10px 0px 0px;
+        width: 100%;
+      };
+
+      .title_content, .description, .info_game_content {
+        width: 88%;
+      };
+
+      .title_content {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 18px 0px 6px 0px;
+
+        h3 {
+          font-size: 0.9rem;
+          font-weight: 900;
+          margin-right: 2px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 80%;
+        };
+
+        span {
+          background: variables.$blue-primary;
+          border-radius: 7px;
+          color: variables.$white-primary;
+          font-size: 14px;
+          font-weight: 700;
+          margin-left: 2px;
+          padding: 2px;
+          text-align: center;
+          width: 50px;
+        };
+      };
+
+      .description {
+        font-size: 1rem;
+        margin: 2px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      };
+
+      .info_game_content {
+        align-items: center;
+        display: flex;
+        height: 19px;
+        justify-content: flex-end;
+        margin: 10px 0px 18px 0px;
+
+        span {
+          align-items: center;
+          background: variables.$color-secondary;
+          border-radius: 4px;
+          color: variables.$color-primary;
+          display: flex;
+          font-size: 0.8rem;
+          font-weight: 900;
+          justify-content: center;
+          margin-right: 2px;
+          padding: 2px 6px;
+        };
+
+        .icon {
+          align-items: center;
+          display: flex;
+          font-size: 1.5rem;
+          margin-left: 2px;
+        };
+      };
+    };
+  };
+};
+
+// ================ notebooks and tablets in landscape mode ================
+@media (max-width: variables.$breakpoint-lg) {
+// mini layout ====================>
+  .card_container_mini {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 48px;
+
+    .card_content_mini {
+      align-items: center;
+      background: variables.$dark;
+      border-radius: 6px;
+      box-shadow: 0px 0px 30px 8px variables.$dark;
+      display: flex;
+      flex-direction: column;
+      margin: 10px 10px 16px 10px;
+      transition: all 0.2s ease-in-out;
+      width: 30%;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+
+      img {
+        border-radius: 6px 6px 0px 0px;
+        width: 100%;
+      };
+
+      .title_content, .description, .info_game_content {
+        width: 88%;
+      };
+
+      .title_content {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 18px 0px 6px 0px;
+
+        h3 {
+          font-size: 1.1rem;
+          font-weight: 900;
+          margin-right: 2px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 80%;
+        };
+
+        span {
+          background: variables.$blue-primary;
+          border-radius: 7px;
+          color: variables.$white-primary;
+          font-weight: 900;
+          margin-left: 2px;
+          padding: 4px;
+          text-align: center;
+          width: 50px;
+        };
+      };
+
+      .description {
+        font-size: 1.1rem;
+        margin: 2px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      };
+
+      .info_game_content {
+        align-items: center;
+        display: flex;
+        height: 19px;
+        justify-content: flex-end;
+        margin: 10px 0px 18px 0px;
+
+        span {
+          align-items: center;
+          background: variables.$color-secondary;
+          border-radius: 4px;
+          color: variables.$color-primary;
+          display: flex;
+          font-size: 0.8rem;
+          font-weight: 900;
+          justify-content: center;
+          margin-right: 2px;
+          padding: 2px 6px;
+        };
+
+        .icon {
+          align-items: center;
+          display: flex;
+          font-size: 1.5rem;
+          margin-left: 2px;
+        };
+      };
+    };
+  };
+};;
+
+// ==== tablets in portrait mode and smartphones in landscape mode =========
+@media (max-width: variables.$breakpoint-md) {
+// mini layout ====================>
+  .card_container_mini {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 40px;
+
+    .card_content_mini {
+      align-items: center;
+      background: variables.$dark;
+      border-radius: 6px;
+      box-shadow: 0px 0px 30px 8px variables.$dark;
+      display: flex;
+      flex-direction: column;
+      margin: 10px 10px 16px 10px;
+      transition: all 0.2s ease-in-out;
+      width: 42%;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      img {
+        border-radius: 6px 6px 0px 0px;
+        width: 100%;
+      };
+
+      .title_content, .description, .info_game_content {
+        width: 88%;
+      };
+
+      .title_content {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 18px 0px 6px 0px;
+
+        h3 {
+          font-size: 1.2rem;
+          font-weight: 900;
+          margin-right: 2px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 80%;
+        };
+
+        span {
+          background: variables.$blue-primary;
+          border-radius: 7px;
+          color: variables.$white-primary;
+          font-weight: 900;
+          margin-left: 2px;
+          padding: 4px;
+          text-align: center;
+          width: 50px;
+        };
+      };
+
+      .description {
+        font-size: 1.3rem;
+        margin: 2px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      };
+
+      .info_game_content {
+        align-items: center;
+        display: flex;
+        height: 19px;
+        justify-content: flex-end;
+        margin: 10px 0px 18px 0px;
+
+        span {
+          align-items: center;
+          background: variables.$color-secondary;
+          border-radius: 4px;
+          color: variables.$color-primary;
+          display: flex;
+          font-size: 0.9rem;
+          font-weight: 900;
+          justify-content: center;
+          margin-right: 2px;
+          padding: 2px 6px;
+        };
+
+        .icon {
+          align-items: center;
+          display: flex;
+          font-size: 1.5rem;
+          margin-left: 2px;
+        };
+      };
+    };
+  };
+};
+
+// =================== smartphones in portrait mode ========================
+@media (max-width: variables.$breakpoint-sm) {
+  // mini layout ====================>
+  .card_container_mini {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    
+    .card_content_mini {
+      align-items: center;
+      background: variables.$dark;
+      border-radius: 6px;
+      box-shadow: 0px 0px 30px 8px variables.$dark;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s ease-in-out;
+      width: 84%;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      img {
+        border-radius: 6px 6px 0px 0px;
+        width: 100%;
+      };
+
+      .title_content, .description, .info_game_content {
+        width: 88%;
+      };
+
+      .title_content {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 18px 0px 6px 0px;
+
+        h3 {
+          font-size: 1.2rem;
+          font-weight: 900;
+          margin-right: 2px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 80%;
+        };
+
+        span {
+          @include mixins.icon_free
+        };
+      };
+
+      .description {
+        font-size: 1.3rem;
+        margin: 2px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      };
+
+      .info_game_content {
+        align-items: center;
+        display: flex;
+        height: 19px;
+        justify-content: flex-end;
+        margin: 10px 0px 18px 0px;
+
+        span {
+          align-items: center;
+          background: variables.$color-secondary;
+          border-radius: 4px;
+          color: variables.$color-primary;
+          display: flex;
+          font-size: 0.9rem;
+          font-weight: 900;
+          justify-content: center;
+          margin-right: 2px;
+          padding: 2px 6px;
+        };
+
+        .icon {
+          align-items: center;
+          display: flex;
+          font-size: 1.5rem;
+          margin-left: 2px;
+        };
+      };
+    };
+  };
+};
