@@ -15,6 +15,7 @@ function Home() {
           <span> grátis para jogar!</span>
         </h1>
       </div>
+
       <div>
         <Components.CardsGames listGames={ listGames.slice(0, 10) } cardFormat="base" />
         <Components.CardsGamesLike hasTitle={ false } />
