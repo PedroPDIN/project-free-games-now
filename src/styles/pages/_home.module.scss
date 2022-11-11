@@ -1,0 +1,137 @@
+@use '../_variables.scss';
+
+// ============================ big monitors ===============================
+@media (min-width: variables.$breakpoint-lg) {
+  .home_container {
+    .home_content_banner {
+      background-color: variables.$dark;
+      background-image: url(variables.$background-image-home);
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      margin-top: -40px;
+      padding: 6% 0px;
+
+      h1 {
+        color: variables.$white-secondary;
+        text-align: center;
+  
+        span {
+          color: variables.$blue-primary;
+        };
+      };
+    };
+
+    .title {
+      font-size: 24px;
+      margin: 20px 0px 12px 18px;
+    };
+
+    .data_game_content {
+      display: flex;
+      flex-direction: column;
+    };
+  };
+};
+
+// ================ notebooks and tablets in landscape mode ================
+@media (max-width: variables.$breakpoint-lg) {
+  .home_container {
+    .home_content_banner {
+      background-color: variables.$dark;
+      background-image: url(variables.$background-image-home);
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      margin-top: -40px;
+      padding: 12% 0px;
+
+      h1 {
+        color: variables.$white-secondary;
+        text-align: center;
+
+        span {
+          color: variables.$blue-primary;
+        };
+      };
+    };
+
+    .title {
+      font-size: 26px;
+      margin: 20px 0px 12px 18px;
+    };
+
+    .data_game_content {
+      display: flex;
+      flex-direction: column;
+    };
+  }
+};
+
+// ==== tablets in portrait mode and smartphones in landscape mode =========
+@media (max-width: variables.$breakpoint-md) {
+  .home_container {
+    .home_content_banner {
+      background-color: variables.$dark;
+      background-image: url(variables.$background-image-home);
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      margin-top: -40px;
+      padding: 16% 0px;
+
+      h1 {
+        color: variables.$white-secondary;
+        text-align: center;
+
+        span {
+          color: variables.$blue-primary;
+        };
+      };
+    };
+
+    .title {
+      font-size: 24px;
+      margin: 20px 0px 12px 18px;
+    };
+
+    .data_game_content {
+      display: flex;
+      flex-direction: column;
+    };
+  };
+};
+
+// =================== smartphones in portrait mode ========================
+@media (max-width: variables.$breakpoint-sm) {
+  .home_container {
+    .home_content_banner {
+      background-color: variables.$dark;
+      background-image: url(variables.$background-image-home);
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      margin-top: -40px;
+      padding: 20% 0px;
+
+      h1 {
+        color: variables.$white-secondary;
+        text-align: center;
+
+        span {
+          color: variables.$blue-primary;
+        };
+      };
+    };
+
+    .title {
+      font-size: 20px;
+      margin: 20px 0px 12px 18px;
+    };
+
+    .data_game_content {
+      display: flex;
+      flex-direction: column;
+    };
+  };
+};
