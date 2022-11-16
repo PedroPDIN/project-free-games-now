@@ -33,7 +33,12 @@ function CardsGamesLike({ hasTitle }: Props) {
         </div>
       ) : (
         <div>
-          <h1>Em breve os cards sem o title</h1>
+          {gamesLike.map((game) => (
+            <a href={ game.game_url }>
+              <img src={ game.thumbnail } alt={ game.title } />
+              <span>FREE</span>
+            </a>
+          ))}
         </div>
       )}
     </article>

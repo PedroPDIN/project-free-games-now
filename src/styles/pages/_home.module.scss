@@ -132,6 +132,24 @@
     .data_game_content {
       display: flex;
       flex-direction: column;
+
+      .home_content_cards_game {
+        .btn_more_games {
+          display: flex;
+          justify-content: center;
+          margin-top: 12px;
+
+          button {
+            align-items: flex-start;
+            background: none;
+            border: 2px solid variables.$color-secondary;
+            border-radius: 4px;
+            display: flex;
+            font-size: 16px;
+            padding: 8px;
+          };
+        };
+      };
     };
   };
 };
