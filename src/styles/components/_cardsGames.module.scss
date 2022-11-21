@@ -3,7 +3,7 @@
 
 // ============================ big monitors ===============================
 @media (min-width: variables.$breakpoint-lg) {
-// mini layout ====================>
+  // mini layout ====================>
   .card_container_mini {
     display: flex;
     flex-direction: row;
@@ -101,12 +101,120 @@
         };
       };
     };
-  };
+  }; // end =======>
+
+  // base layout ====================>
+  .card_container_base {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .card_content_base {
+      background-color: variables.$dark;
+      border-radius: 4px;
+      box-shadow: 0px 0px 30px 8px variables.$dark;
+      display: flex;
+      height: 120px;
+      justify-content: space-between;
+      overflow: hidden;
+      margin: 10px 0px;
+
+      .thumbnail_game {
+        width: 25%;
+
+        img {
+          height: 100%;
+          width: 100%;
+        };
+      };
+
+      .info_game_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 2px 0px 4px 8px;
+        width: 65%;
+
+        h1, p, span {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        };
+
+        h1 {
+          color: variables.$white-secondary;
+          font-size: 1.2rem;
+        };
+
+        p {
+          font-size: 1rem;
+          margin: 0px;
+        };
+
+        span {
+          align-items: center;
+          background-color: variables.$color-secondary;
+          border-radius: 4px;
+          color: variables.$color-primary;
+          display: flex;
+          font-size: 0.8rem;
+          font-weight: 900;
+          justify-content: center;
+          width: 22%;
+        };
+      };
+
+      .data_status_game {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 10%;
+
+        .icon_platform {
+          font-size: 24px;
+          margin-bottom: -4px;
+        };
+
+        span {
+          background-color: variables.$blue-primary;
+          border-radius: 4px;
+          color: variables.$white-primary;
+          font-size: 11px;
+          font-weight: 900;
+          margin-top: -4px;
+          padding: 4px;
+          text-align: center;
+          width: 40px;
+        };
+      };
+    };
+  }; // end =======>
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ================ notebooks and tablets in landscape mode ================
 @media (max-width: variables.$breakpoint-lg) {
-// mini layout ====================>
+  // mini layout ====================>
   .card_container_mini {
     display: flex;
     flex-direction: row;
@@ -203,11 +311,187 @@
         };
       };
     };
-  };
+  }; // end ========>
+
+  // base layout ====================>
+  .card_container_base { 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .card_content_base {
+      background-color: variables.$dark;
+      border-radius: 4px;
+      box-shadow: 0px 0px 30px 8px variables.$dark;
+      display: flex;
+      height: 100px;
+      justify-content: space-between;
+      overflow: hidden;
+      margin: 10px 0px;
+
+      .thumbnail_game {
+        width: 30%;
+        img{
+          height: 100%;
+          width: 100%;
+        }
+      };
+
+      .info_game_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 2px 0px 4px 8px;
+        width: 60%;
+
+        h1, p, span {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        };
+
+        h1 {
+          color: variables.$white-secondary;
+          font-size: 1.2rem;
+        };
+
+        p {
+          font-size: 1rem;
+          margin: 0px
+        };
+
+        span {
+          align-items: center;
+          background: variables.$color-secondary;
+          border-radius: 4px;
+          color: variables.$color-primary;
+          display: flex;
+          font-size: 0.9rem;
+          font-weight: 900;
+          justify-content: center;
+          width: 28%;
+        };
+      };
+
+      .data_status_game {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 10%;
+
+        .icon_platform {
+          font-size: 24px;
+          margin-bottom: -8px;
+        };
+
+        span {
+          background: variables.$blue-primary;
+          border-radius: 4px;
+          color: variables.$white-primary;
+          font-size: 12px;
+          font-weight: 900;
+          margin-top: -8px;
+          padding: 4px;
+          text-align: center;
+          width: 40px;
+        };
+      };
+    };
+  }; // end ======>
 };
 
 // ==== tablets in portrait mode and smartphones in landscape mode =========
 @media (max-width: variables.$breakpoint-md) {
+  // base layout ====================>
+  .card_container_base {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .card_content_base {
+      background-color: variables.$dark;
+      border-radius: 4px;
+      box-shadow: 0px 0px 30px 8px variables.$dark;
+      display: flex;
+      height: 120px;
+      justify-content: space-between;
+      overflow: hidden;
+      margin: 10px 24px;
+
+
+      .thumbnail_game {
+       width: 30%;
+
+        img {
+          height: 100%;
+          width: 100%;
+        };
+      };
+
+      .info_game_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 2px 0px 4px 8px;
+        width: 56%;
+
+        h1, p, span {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        };
+
+        h1 {
+          color: variables.$white-secondary;
+          font-size: 1.2rem;
+        };
+
+        p {
+          font-size: 1.1rem;
+          margin-bottom: -10px;
+        }
+
+        span {
+          align-items: center;
+          background: variables.$color-secondary;
+          border-radius: 4px;
+          color: variables.$color-primary;
+          display: flex;
+          font-size: 0.9rem;
+          font-weight: 900;
+          justify-content: center;
+          width: 20%;
+        };
+      };
+
+      .data_status_game {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 14%;
+
+        .icon_platform {
+          font-size: 24px;
+          margin-bottom: -8px;
+        };
+
+        span {
+          background: variables.$blue-primary;
+          border-radius: 4px;
+          color: variables.$white-primary;
+          font-size: 12px;
+          font-weight: 900;
+          margin-top: -8px;
+          padding: 4px;
+          text-align: center;
+          width: 40px;
+        };
+      };
+    };
+  }; // end ========>
+
   // mini layout ====================>
   .card_container_mini {
     display: flex;
@@ -319,9 +603,11 @@
       border-radius: 4px;
       box-shadow: 0px 0px 30px 8px variables.$dark;
       display: flex;
+      height: 74px;
       justify-content: space-between;
       overflow: hidden;
       margin: 10px 10px;
+
 
       .thumbnail_game {
         width: 30%;
@@ -335,7 +621,7 @@
       .info_game_content {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         padding: 2px 0px 4px 8px;
         width: 56%;
 
@@ -346,7 +632,13 @@
         };
 
         h1 {
+          color: variables.$white-secondary;
           font-size: 1.2rem;
+        }
+
+        p {
+          font-size: none;
+          margin: 0;
         }
 
         span {
@@ -371,16 +663,19 @@
 
         .icon_platform {
           font-size: 18px;
+          margin: 0px;
         };
 
         span {
           background: variables.$blue-primary;
-          border-radius: 7px;
+          border-radius: 4px;
           color: variables.$white-primary;
           font-size: 10px;
           font-weight: 900;
+          margin: 0px;
           padding: 4px;
           text-align: center;
+          width: 32px;
         };
       };
     };

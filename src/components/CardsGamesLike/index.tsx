@@ -32,9 +32,13 @@ function CardsGamesLike({ hasTitle }: Props) {
           ))}
         </div>
       ) : (
-        <div>
+        <div className={ style.card_container_not_title }>
           {gamesLike.map((game) => (
-            <a href={ game.game_url }>
+            <a
+              key={ game.id }
+              href={ game.game_url }
+              className={ style.card_content_not_title }
+            >
               <img src={ game.thumbnail } alt={ game.title } />
               <span>FREE</span>
             </a>

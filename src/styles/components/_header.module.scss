@@ -12,6 +12,7 @@
     position: relative;
     position: sticky;
     top: 0;
+    z-index: 99;
 
     .header_content {
       align-items: center;
@@ -151,6 +152,7 @@
     position: relative;
     position: sticky;
     top: 0;
+    z-index: 99;
 
     .header_content {
       align-items: center;
@@ -289,6 +291,7 @@
     position: relative;
     position: sticky;
     top: 0;
+    z-index: 99;
 
     .header_content {
       align-items: center;
@@ -428,6 +431,7 @@
     position: sticky;
     top: 0;
     width: 100%;
+    z-index: 99;
 
     .header_content {
       align-items: center;

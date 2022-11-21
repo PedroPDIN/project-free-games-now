@@ -30,7 +30,10 @@ function Home() {
             </button>
           </div>
         </div>
-        <Components.CardsGamesLike hasTitle={ false } />
+
+        <div className={ style.home_content_cards_like }>
+          <Components.CardsGamesLike hasTitle={ false } />
+        </div>
       </div>
     </main>
   );

@@ -6,8 +6,13 @@
     padding: 0 8%;
   } @else {
     justify-content: center
-  }
-}
+  };
+};
+
+@mixin home_font_Style_title() {
+  font-size: 26px;
+  margin: 40px 0px 12px 38px;
+};
 
 @mixin icon_free() {
   background: variables.$blue-primary;
@@ -18,4 +23,4 @@
   padding: 4px;
   text-align: center;
   width: 50px;
-}
+};
