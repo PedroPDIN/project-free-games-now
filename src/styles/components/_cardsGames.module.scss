@@ -3,6 +3,99 @@
 
 // ============================ big monitors ===============================
 @media (min-width: variables.$breakpoint-lg) {
+  // base layout ====================>
+  .card_container_base {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .card_content_base {
+      background-color: variables.$dark;
+      border-radius: 4px;
+      box-shadow: 0px 0px 30px 8px variables.$dark;
+      display: flex;
+      height: 120px;
+      justify-content: space-between;
+      overflow: hidden;
+      margin: 10px 0px;
+      transition: all 0.2s ease-in-out;
+      
+      &:hover {
+        @include mixins.hover_card_animation();
+      };
+
+      .thumbnail_game {
+        width: 25%;
+
+        img {
+          height: 100%;
+          width: 100%;
+        };
+      };
+
+      .info_game_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 2px 0px 4px 8px;
+        width: 65%;
+
+        h1, p, span {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        };
+
+        h1 {
+          color: variables.$white-secondary;
+          font-size: 1.2rem;
+        };
+
+        p {
+          font-size: 1rem;
+          margin: 0px;
+        };
+
+        span {
+          align-items: center;
+          background-color: variables.$color-secondary;
+          border-radius: 4px;
+          color: variables.$color-primary;
+          display: flex;
+          font-size: 0.8rem;
+          font-weight: 900;
+          justify-content: center;
+          width: 22%;
+        };
+      };
+
+      .data_status_game {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 10%;
+
+        .icon_platform {
+          font-size: 24px;
+          margin-bottom: -4px;
+        };
+
+        span {
+          background-color: variables.$blue-primary;
+          border-radius: 4px;
+          color: variables.$white-primary;
+          font-size: 11px;
+          font-weight: 900;
+          margin-top: -4px;
+          padding: 4px;
+          text-align: center;
+          width: 40px;
+        };
+      };
+    };
+  }; // end =======>
+
   // mini layout ====================>
   .card_container_mini {
     display: flex;
@@ -24,8 +117,8 @@
       width: 22%;
 
       &:hover {
-        transform: scale(1.1);
-      }
+        @include mixins.hover_card_animation();
+      };
 
       img {
         border-radius: 10px 10px 0px 0px;
@@ -102,9 +195,12 @@
       };
     };
   }; // end =======>
+};
 
+// ================ notebooks and tablets in landscape mode ================
+@media (max-width: variables.$breakpoint-lg) {
   // base layout ====================>
-  .card_container_base {
+  .card_container_base { 
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -114,18 +210,22 @@
       border-radius: 4px;
       box-shadow: 0px 0px 30px 8px variables.$dark;
       display: flex;
-      height: 120px;
+      height: 100px;
       justify-content: space-between;
       overflow: hidden;
       margin: 10px 0px;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        @include mixins.hover_card_animation();
+      };
 
       .thumbnail_game {
-        width: 25%;
-
-        img {
+        width: 30%;
+        img{
           height: 100%;
           width: 100%;
-        };
+        }
       };
 
       .info_game_content {
@@ -133,7 +233,7 @@
         flex-direction: column;
         justify-content: space-around;
         padding: 2px 0px 4px 8px;
-        width: 65%;
+        width: 60%;
 
         h1, p, span {
           text-overflow: ellipsis;
@@ -148,19 +248,19 @@
 
         p {
           font-size: 1rem;
-          margin: 0px;
+          margin: 0px
         };
 
         span {
           align-items: center;
-          background-color: variables.$color-secondary;
+          background: variables.$color-secondary;
           border-radius: 4px;
           color: variables.$color-primary;
           display: flex;
-          font-size: 0.8rem;
+          font-size: 0.9rem;
           font-weight: 900;
           justify-content: center;
-          width: 22%;
+          width: 28%;
         };
       };
 
@@ -173,47 +273,24 @@
 
         .icon_platform {
           font-size: 24px;
-          margin-bottom: -4px;
+          margin-bottom: -8px;
         };
 
         span {
-          background-color: variables.$blue-primary;
+          background: variables.$blue-primary;
           border-radius: 4px;
           color: variables.$white-primary;
-          font-size: 11px;
+          font-size: 12px;
           font-weight: 900;
-          margin-top: -4px;
+          margin-top: -8px;
           padding: 4px;
           text-align: center;
           width: 40px;
         };
       };
     };
-  }; // end =======>
-};
+  }; // end ======>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ================ notebooks and tablets in landscape mode ================
-@media (max-width: variables.$breakpoint-lg) {
   // mini layout ====================>
   .card_container_mini {
     display: flex;
@@ -234,8 +311,8 @@
       width: 30%;
 
       &:hover {
-        transform: scale(1.1);
-      }
+        @include mixins.hover_card_animation();
+      };
 
 
       img {
@@ -312,93 +389,6 @@
       };
     };
   }; // end ========>
-
-  // base layout ====================>
-  .card_container_base { 
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
-    .card_content_base {
-      background-color: variables.$dark;
-      border-radius: 4px;
-      box-shadow: 0px 0px 30px 8px variables.$dark;
-      display: flex;
-      height: 100px;
-      justify-content: space-between;
-      overflow: hidden;
-      margin: 10px 0px;
-
-      .thumbnail_game {
-        width: 30%;
-        img{
-          height: 100%;
-          width: 100%;
-        }
-      };
-
-      .info_game_content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 2px 0px 4px 8px;
-        width: 60%;
-
-        h1, p, span {
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap;
-        };
-
-        h1 {
-          color: variables.$white-secondary;
-          font-size: 1.2rem;
-        };
-
-        p {
-          font-size: 1rem;
-          margin: 0px
-        };
-
-        span {
-          align-items: center;
-          background: variables.$color-secondary;
-          border-radius: 4px;
-          color: variables.$color-primary;
-          display: flex;
-          font-size: 0.9rem;
-          font-weight: 900;
-          justify-content: center;
-          width: 28%;
-        };
-      };
-
-      .data_status_game {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        width: 10%;
-
-        .icon_platform {
-          font-size: 24px;
-          margin-bottom: -8px;
-        };
-
-        span {
-          background: variables.$blue-primary;
-          border-radius: 4px;
-          color: variables.$white-primary;
-          font-size: 12px;
-          font-weight: 900;
-          margin-top: -8px;
-          padding: 4px;
-          text-align: center;
-          width: 40px;
-        };
-      };
-    };
-  }; // end ======>
 };
 
 // ==== tablets in portrait mode and smartphones in landscape mode =========
@@ -418,7 +408,11 @@
       justify-content: space-between;
       overflow: hidden;
       margin: 10px 24px;
+      transition: all 0.2s ease-in-out;
 
+      &:hover {
+        @include mixins.hover_card_animation();
+      };
 
       .thumbnail_game {
        width: 30%;
@@ -512,8 +506,8 @@
       width: 42%;
 
       &:hover {
-        transform: scale(1.1);
-      }
+        @include mixins.hover_card_animation();
+      };
 
       img {
         border-radius: 6px 6px 0px 0px;
@@ -607,6 +601,11 @@
       justify-content: space-between;
       overflow: hidden;
       margin: 10px 10px;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        @include mixins.hover_card_animation();
+      };
 
 
       .thumbnail_game {
@@ -700,8 +699,8 @@
       width: 84%;
 
       &:hover {
-        transform: scale(1.1);
-      }
+        @include mixins.hover_card_animation();
+      };
 
       img {
         border-radius: 6px 6px 0px 0px;

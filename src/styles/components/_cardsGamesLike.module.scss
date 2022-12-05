@@ -5,7 +5,7 @@
 @media (min-width: variables.$breakpoint-lg) {
   .title {
     @include mixins.home_font_Style_title();
-    margin-left: 0;
+    margin-left: 7%;
   };
 
   // layout containing the title =======>
@@ -21,8 +21,12 @@
       display: flex;
       flex-direction: column;
       margin: 14px 10px;
-
+      transition: all 0.2s ease-in-out;
       width: 28%;
+
+      &:hover {
+        @include mixins.hover_card_animation();
+      };
 
       img {
         border-radius: 6px 6px 0px 0px;
@@ -64,7 +68,13 @@
       margin: 10px 0px;
       position: relative;
       overflow: hidden;
+      transition: all 0.2s ease-in-out;
       width: 100%;
+
+      &:hover {
+        @include mixins.hover_card_animation();
+      };
+
 
       img {
         bottom: 0;
@@ -92,26 +102,11 @@
   }; // end =======>
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ================ notebooks and tablets in landscape mode ================
 @media (max-width: variables.$breakpoint-lg) {
   .title {
     @include mixins.home_font_Style_title();
-    margin-left: 0;
+    margin-left: 3%;
   };
 
   // layout containing the title =======>
@@ -127,8 +122,12 @@
       display: flex;
       flex-direction: column;
       margin: 14px 10px;
-
+      transition: all 0.2s ease-in-out;
       width: 30%;
+
+      &:hover {
+        @include mixins.hover_card_animation();
+      };
 
       img {
         border-radius: 6px 6px 0px 0px;
@@ -170,7 +169,12 @@
       margin: 10px 0px;
       position: relative;
       overflow: hidden;
+      transition: all 0.2s ease-in-out;
       width: 100%;
+
+      &:hover {
+        @include mixins.hover_card_animation();
+      };
 
       img {
         bottom: 0;
@@ -218,8 +222,12 @@
       display: flex;
       flex-direction: column;
       margin: 14px 20px;
-
+      transition: all 0.2s ease-in-out;
       width: 40%;
+
+      &:hover {
+        @include mixins.hover_card_animation();
+      };
 
       img {
         border-radius: 6px 6px 0px 0px;
@@ -262,7 +270,12 @@
       margin: 10px 8px;
       position: relative;
       overflow: hidden;
+      transition: all 0.2s ease-in-out;
       width: 47%;
+
+      &:hover {
+        @include mixins.hover_card_animation();
+      };
 
       img {
         bottom: 0;
@@ -308,7 +321,12 @@
       flex-direction: column;
       margin: 14px 0px;
       background: variables.$dark;
+      transition: all 0.2s ease-in-out;
       width: 90%;
+
+      &:hover {
+        @include mixins.hover_card_animation();
+      };
 
       img {
         border-radius: 6px 6px 0px 0px;
@@ -349,8 +367,13 @@
       margin: 10px 10px;
       position: relative;
       overflow: hidden;
+      transition: all 0.2s ease-in-out;
       width: 90%;
-      
+
+      &:hover {
+        @include mixins.hover_card_animation();
+      };
+
       img {
         bottom: 0;
         display: flex;

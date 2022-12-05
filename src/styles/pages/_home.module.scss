@@ -62,41 +62,11 @@
         align-items: center;
         display: flex;
         flex-direction: column;
-        margin-top: -88px;
+        margin: -88px 0px 0px 20px;
       };
     };
   };
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // ================ notebooks and tablets in landscape mode ================
 @media (max-width: variables.$breakpoint-lg) {
