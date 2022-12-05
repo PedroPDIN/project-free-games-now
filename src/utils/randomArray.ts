@@ -21,7 +21,7 @@ const fisherYates = (maxNumber: number): number[] => {
     arrNumber[i] = tmp;
   }
 
-  return arrNumber.slice(0, 6);
+  return arrNumber;
 };
 
 export default fisherYates;

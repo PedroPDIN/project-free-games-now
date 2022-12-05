@@ -5,7 +5,7 @@ import * as Components from '../../components';
 import style from '../../styles/pages/_home.module.scss';
 
 function Home() {
-  const { listGames } = useContext(MainContext);
+  const { listGames, gamesLike } = useContext(MainContext);
 
   return (
     <main className={ style.home_container }>
@@ -32,7 +32,7 @@ function Home() {
         </div>
 
         <div className={ style.home_content_cards_like }>
-          <Components.CardsGamesLike hasTitle={ false } />
+          <Components.CardsGamesLike hasTitle={ false } listGamesLike={ gamesLike.slice(0, 6) } />
         </div>
       </div>
     </main>
