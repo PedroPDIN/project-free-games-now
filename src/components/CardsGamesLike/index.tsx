@@ -19,7 +19,7 @@ function CardsGamesLike({ hasTitle, listGamesLike }: Props) {
             <a
               key={ game.id }
               href={ game.game_url }
-              className={ style.card_content_happy_title }
+              className={ `card-body ${style.card_content_happy_title}` }
             >
               <img src={ game.thumbnail } alt={ game.title } />
 
@@ -36,7 +36,7 @@ function CardsGamesLike({ hasTitle, listGamesLike }: Props) {
             <a
               key={ game.id }
               href={ game.game_url }
-              className={ style.card_content_not_title }
+              className={ `card-body ${style.card_content_not_title}` }
             >
               <img src={ game.thumbnail } alt={ game.title } />
               <span>FREE</span>

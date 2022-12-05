@@ -10,7 +10,6 @@
     width: 100%;
 
     .card_content_base {
-      background-color: variables.$dark;
       border-radius: 4px;
       box-shadow: 0px 0px 30px 8px variables.$dark;
       display: flex;
@@ -104,10 +103,8 @@
     justify-content: flex-start;
     margin-left: 70px;
 
-    // background: red;
     .card_content_mini {
       align-items: center;
-      background: variables.$dark;
       border-radius: 6px;
       box-shadow: 0px 0px 30px 8px variables.$dark;
       display: flex;
@@ -206,7 +203,6 @@
     width: 100%;
 
     .card_content_base {
-      background-color: variables.$dark;
       border-radius: 4px;
       box-shadow: 0px 0px 30px 8px variables.$dark;
       display: flex;
@@ -301,7 +297,6 @@
 
     .card_content_mini {
       align-items: center;
-      background: variables.$dark;
       border-radius: 6px;
       box-shadow: 0px 0px 30px 8px variables.$dark;
       display: flex;
@@ -400,7 +395,6 @@
     width: 100%;
 
     .card_content_base {
-      background-color: variables.$dark;
       border-radius: 4px;
       box-shadow: 0px 0px 30px 8px variables.$dark;
       display: flex;
@@ -496,7 +490,6 @@
 
     .card_content_mini {
       align-items: center;
-      background: variables.$dark;
       border-radius: 6px;
       box-shadow: 0px 0px 30px 8px variables.$dark;
       display: flex;
@@ -593,7 +586,6 @@
     flex-direction: column; 
 
     .card_content_base {
-      background-color: variables.$dark;
       border-radius: 4px;
       box-shadow: 0px 0px 30px 8px variables.$dark;
       display: flex;
@@ -690,7 +682,6 @@
     
     .card_content_mini {
       align-items: center;
-      background: variables.$dark;
       border-radius: 6px;
       box-shadow: 0px 0px 30px 8px variables.$dark;
       display: flex;

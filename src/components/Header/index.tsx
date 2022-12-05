@@ -29,7 +29,7 @@ function Header({ filterGames }: Props) {
 
             <div className={ style.selects_container }>
               <select>
-                <option disabled selected>Selecione</option>
+                <option disabled selected>Categorias</option>
                 {tenCategories.map((category, index) => (
                   // eslint-disable-next-line react/no-array-index-key
                   <option key={ index } value={ category }>{category}</option>

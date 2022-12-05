@@ -19,7 +19,7 @@ function CardsGames({ listGames, cardFormat }: Props) {
             listGames.map((game) => (
               <a
                 href={ game.game_url }
-                className={ style.card_content_base }
+                className={ `card-body ${style.card_content_base}` }
               >
                 <div className={ style.thumbnail_game }>
                   <img src={ game.thumbnail } alt={ game.title } />
@@ -49,7 +49,7 @@ function CardsGames({ listGames, cardFormat }: Props) {
             listGames.map((game) => (
               <a
                 href={ game.game_url }
-                className={ style.card_content_mini }
+                className={ `card-body ${style.card_content_mini}` }
               >
                 <img src={ game.thumbnail } alt={ game.title } />
 
