@@ -1,3 +1,5 @@
+@use '_variables.scss';
+
 // reset
 * {
   box-sizing: border-box;
@@ -8,24 +10,12 @@
 }
 
 body {
-  background-color: $color-primary;
+  background-color: $color-base-page;
 
-    select {
-      cursor: pointer;
-    }
-}
-
-@media (max-width: 1080px) {
-  html {
-    font-size: 90%;
-  }
-}
-
-@media (max-width: 768px) { 
-  html {
-    font-size: 80%;
-  }
-}
+  select {
+    cursor: pointer;
+  };
+};
 
 button {
   cursor: pointer;
@@ -33,4 +23,9 @@ button {
 
 a {
   text-decoration: none;
+};
+
+// layout
+.card-body {
+  background-color: variables.$color-primary !important;
 };

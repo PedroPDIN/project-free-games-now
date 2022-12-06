@@ -1,0 +1,264 @@
+@use '../_variables.scss';
+@use '../_mixins.scss';
+
+// ============================ big monitors ===============================
+@media (min-width: variables.$breakpoint-lg) {
+  .home_container {
+    .home_content_banner {
+      background-color: variables.$dark;
+      background-image: url(variables.$background-image-home);
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      margin-top: -40px;
+      padding: 6% 0px;
+
+      h1 {
+        color: variables.$white-secondary;
+        text-align: center;
+  
+        span {
+          color: variables.$blue-primary;
+        };
+      };
+    };
+
+    .title {
+      @include mixins.home_font_Style_title();
+      margin-left: 150px;
+    };
+
+    .data_game_content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding: 0px 150px;
+      width: 100%;
+
+      .home_content_cards_game {
+        width: 70%;
+
+        .btn_more_games {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 8px;
+
+          button {
+            align-items: flex-start;
+            background: none;
+            border: 2px solid variables.$color-secondary;
+            border-radius: 4px;
+            display: flex;
+            font-size: 16px;
+            justify-content: center;
+            padding: 4px;
+            width: 140px;
+          };
+        }
+      };
+
+      .home_content_cards_like {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: -88px 0px 0px 20px;
+      };
+    };
+  };
+};
+
+// ================ notebooks and tablets in landscape mode ================
+@media (max-width: variables.$breakpoint-lg) {
+  .home_container {
+    .home_content_banner {
+      background-color: variables.$dark;
+      background-image: url(variables.$background-image-home);
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      margin-top: -40px;
+      padding: 12% 0px;
+
+      h1 {
+        color: variables.$white-secondary;
+        text-align: center;
+
+        span {
+          color: variables.$blue-primary;
+        };
+      };
+    };
+
+    .title {
+      @include mixins.home_font_Style_title();
+    };
+
+    .data_game_content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding: 0px 38px;
+      width: 100%;
+
+      .home_content_cards_game {
+        width: 60%;
+  
+        .btn_more_games {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 8px;
+  
+          button {
+            align-items: flex-start;
+            background: none;
+            border: 2px solid variables.$color-secondary;
+            border-radius: 4px;
+            display: flex;
+            font-size: 16px;
+            justify-content: center;
+            padding: 4px;
+            width: 140px;
+          };
+        };
+      };
+
+      .home_content_cards_like {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: -88px;
+      };
+    };
+  }
+};
+
+// ==== tablets in portrait mode and smartphones in landscape mode =========
+@media (max-width: variables.$breakpoint-md) {
+  .home_container {
+    .home_content_banner {
+      background-color: variables.$dark;
+      background-image: url(variables.$background-image-home);
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      margin-top: -40px;
+      padding: 16% 0px;
+
+      h1 {
+        color: variables.$white-secondary;
+        text-align: center;
+
+        span {
+          color: variables.$blue-primary;
+        };
+      };
+    };
+
+    .title {
+      font-size: 24px;
+      margin: 20px 0px 12px 18px;
+    };
+
+    .data_game_content {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+
+      .home_content_cards_game {
+        width: 100%;
+        .btn_more_games {
+          display: flex;
+          justify-content: center;
+          margin-top: 12px;
+  
+          button {
+            align-items: flex-start;
+            background: none;
+            border: 2px solid variables.$color-secondary;
+            border-radius: 4px;
+            display: flex;
+            font-size: 16px;
+            justify-content: center;
+            padding: 8px;
+            width: 140px;
+          };
+        };
+      };
+
+      .home_content_cards_like {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+      }
+    };
+  };
+};
+
+// =================== smartphones in portrait mode ========================
+@media (max-width: variables.$breakpoint-sm) {
+  .home_container {
+    .home_content_banner {
+      background-color: variables.$dark;
+      background-image: url(variables.$background-image-home);
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      margin-top: -40px;
+      padding: 20% 0px;
+
+      h1 {
+        color: variables.$white-secondary;
+        text-align: center;
+
+        span {
+          color: variables.$blue-primary;
+        };
+      };
+    };
+
+    .title {
+      font-size: 20px;
+      margin: 20px 0px 12px 18px;
+    };
+
+    .data_game_content {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+
+      .home_content_cards_game {
+        width: 100%;
+
+        .btn_more_games {
+          display: flex;
+          justify-content: center;
+          margin-top: 12px;
+
+          button {
+            align-items: flex-start;
+            background: none;
+            border: 2px solid variables.$color-secondary;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            font-size: 16px;
+            padding: 8px;
+            width: 120px;
+          };
+        };
+      };
+
+      .home_content_cards_like {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+      };
+    };
+  };
+};

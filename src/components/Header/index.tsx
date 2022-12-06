@@ -1,6 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { FiSearch } from 'react-icons/fi';
+import { useNavigate, Link } from 'react-router-dom';
+// import { FiSearch } from 'react-icons/fi';
+import { FaSearch } from 'react-icons/fa';
 import { SiGamejolt } from 'react-icons/si';
 import categories from '../../services/GameCategories';
 
@@ -20,16 +21,16 @@ function Header({ filterGames }: Props) {
         filterGames ? (
           <div className={ style.header_content_layout_filter }>
 
-            <div className={ style.title_container }>
+            <Link to="/home" className={ style.title_container }>
               <SiGamejolt className={ style.icon } />
               <h1 className={ style.title }>
                 Free Game Now
               </h1>
-            </div>
+            </Link>
 
             <div className={ style.selects_container }>
               <select>
-                <option disabled selected>Selecione</option>
+                <option disabled selected>Categorias</option>
                 {tenCategories.map((category, index) => (
                   // eslint-disable-next-line react/no-array-index-key
                   <option key={ index } value={ category }>{category}</option>
@@ -47,7 +48,11 @@ function Header({ filterGames }: Props) {
               type="button"
               onClick={ () => navigate('/search') }
             >
-              <FiSearch />
+              <FaSearch
+                className={ style.icon_search }
+              />
+
+              <span>Procurar Game</span>
             </button>
           </div>
         ) : (
@@ -64,7 +69,11 @@ function Header({ filterGames }: Props) {
               type="button"
               onClick={ () => navigate('/search') }
             >
-              <FiSearch />
+              <FaSearch
+                className={ style.icon_search }
+              />
+
+              <span>Procurar Game</span>
             </button>
           </div>
         )

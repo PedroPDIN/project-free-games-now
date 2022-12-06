@@ -6,8 +6,19 @@
     padding: 0 8%;
   } @else {
     justify-content: center
-  }
-}
+  };
+};
+
+@mixin home_font_Style_title() {
+  font-size: 26px;
+  margin: 40px 0px 12px 38px;
+};
+
+@mixin hover_card_animation() {
+  transform: scale(1.02);
+  box-shadow: 0 10px 60px variables.$black !important;
+  z-index: 1;
+};
 
 @mixin icon_free() {
   background: variables.$blue-primary;
@@ -18,4 +29,4 @@
   padding: 4px;
   text-align: center;
   width: 50px;
-}
+};

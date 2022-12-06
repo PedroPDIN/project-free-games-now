@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
 // colors
-$color-primary: #3a3f44;
+$color-base-page: #272b30;
+$color-primary: #32383e;
 $color-secondary: #7a8288;
 $break-color-primary: rgba(94,84,84,.1);
 $dark: #272b30;
@@ -10,6 +11,8 @@ $black: rgb(8, 8, 8);
 $blue-primary: #4799eb;
 $white-primary: #fff;
 $white-secondary: rgb(190, 189, 189);
+
+$background-image-home: "https://www.freetogame.com/assets/images/paladins.png";
 
 // breakpoints
 $breakpoint-sm: 480px;

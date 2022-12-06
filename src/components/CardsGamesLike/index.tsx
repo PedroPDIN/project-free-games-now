@@ -1,26 +1,25 @@
-import React, { useContext } from 'react';
-import MainContext from '../../store/Context/Main.Context';
+import React from 'react';
+import { IGame } from '../../interfaces/Game.interface';
 
 import style from '../../styles/components/_cardsGamesLike.module.scss';
 
 interface Props {
   hasTitle: boolean;
+  listGamesLike: IGame[];
 }
 
-function CardsGamesLike({ hasTitle }: Props) {
-  const { gamesLike } = useContext(MainContext);
-
+function CardsGamesLike({ hasTitle, listGamesLike }: Props) {
   return (
     <article>
       <h1 className={ style.title }>Você pode gostar</h1>
 
       {hasTitle ? (
         <div className={ style.card_container_happy_title }>
-          {gamesLike.map((game) => (
+          {listGamesLike.map((game) => (
             <a
               key={ game.id }
               href={ game.game_url }
-              className={ style.card_content_happy_title }
+              className={ `card-body ${style.card_content_happy_title}` }
             >
               <img src={ game.thumbnail } alt={ game.title } />
 
@@ -32,8 +31,17 @@ function CardsGamesLike({ hasTitle }: Props) {
           ))}
         </div>
       ) : (
-        <div>
-          <h1>Em breve os cards sem o title</h1>
+        <div className={ style.card_container_not_title }>
+          {listGamesLike.map((game) => (
+            <a
+              key={ game.id }
+              href={ game.game_url }
+              className={ `card-body ${style.card_content_not_title}` }
+            >
+              <img src={ game.thumbnail } alt={ game.title } />
+              <span>FREE</span>
+            </a>
+          ))}
         </div>
       )}
     </article>

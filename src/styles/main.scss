@@ -3,3 +3,8 @@
 
 // mixins
 @import '_mixins.scss';
+
+//components
+@import './components/_cardsGames.module';
+@import './components/_cardsGamesLike.module';
+@import './components/_header.module';
