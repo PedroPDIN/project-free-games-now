@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 // import { FiSearch } from 'react-icons/fi';
 import { FaSearch } from 'react-icons/fa';
 import { SiGamejolt } from 'react-icons/si';
@@ -21,12 +21,12 @@ function Header({ filterGames }: Props) {
         filterGames ? (
           <div className={ style.header_content_layout_filter }>
 
-            <div className={ style.title_container }>
+            <Link to="/home" className={ style.title_container }>
               <SiGamejolt className={ style.icon } />
               <h1 className={ style.title }>
                 Free Game Now
               </h1>
-            </div>
+            </Link>
 
             <div className={ style.selects_container }>
               <select>
