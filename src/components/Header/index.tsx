@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FiSearch } from 'react-icons/fi';
+// import { FiSearch } from 'react-icons/fi';
+import { FaSearch } from 'react-icons/fa';
 import { SiGamejolt } from 'react-icons/si';
 import categories from '../../services/GameCategories';
 
@@ -47,7 +48,11 @@ function Header({ filterGames }: Props) {
               type="button"
               onClick={ () => navigate('/search') }
             >
-              <FiSearch />
+              <FaSearch
+                className={ style.icon_search }
+              />
+
+              <span>Procurar Game</span>
             </button>
           </div>
         ) : (
@@ -64,7 +69,11 @@ function Header({ filterGames }: Props) {
               type="button"
               onClick={ () => navigate('/search') }
             >
-              <FiSearch />
+              <FaSearch
+                className={ style.icon_search }
+              />
+
+              <span>Procurar Game</span>
             </button>
           </div>
         )

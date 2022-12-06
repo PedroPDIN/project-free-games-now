@@ -12,7 +12,7 @@
     position: relative;
     position: sticky;
     top: 0;
-    z-index: 99;
+    z-index: 90;
 
     .header_content {
       align-items: center;
@@ -26,7 +26,7 @@
         align-items: center;
         justify-content: flex-start;
         width: 100%;
-        
+
         .icon {
           font-size: 30px;
           margin: 0 4px;
@@ -52,7 +52,7 @@
           font-size: 17px;
           text-align: center;
           width: 124px;
-        
+
           &:hover {
             color: variables.$white-primary;
           };
@@ -68,10 +68,42 @@
         background: none;
         border: 0;
         font-size: 24px;
-        margin: 6px 6% 0px 0px;
+        margin: 6px 2% 0px 0px;
+        position: relative;
+        transition: all 0.5s ease-in;
+        width: 115px;
 
-        &:hover {
-          color: variables.$white-primary;
+        .icon_search path {
+          &:hover {
+            color: variables.$white-primary;
+          };
+        };
+
+        &:hover span {
+          visibility: visible;
+        };
+
+        span {
+          background-color: black;
+          border-radius: 4px;
+          font-size: 12px;
+          font-weight: 900;
+          padding: 4px;
+          position: absolute;
+          right: 2px;
+          text-align: center;
+          top: 100%;
+          visibility: hidden;
+          width: 100px;
+          z-index: 1;
+
+          &::after {
+            content: "";
+            margin-left: 20px;
+            position: absolute;
+            top: 0;
+            left: 10px;
+          };
         };
       };
     };
@@ -80,7 +112,7 @@
       align-items: center;
       display: flex;
       width: 100%;
-    
+
       @include mixins.header-layout-filter(false);
 
       .title_container {
@@ -89,7 +121,7 @@
         justify-content: flex-start;
         margin-left: 8%;
         width: 100%;
-    
+
         .icon {
           font-size: 30px;
           margin: 0 4px;
@@ -115,7 +147,7 @@
           font-size: 17px;
           text-align: center;
           width: 124px;
-        
+
           &:hover {
             color: variables.$white-primary;
           };
@@ -132,9 +164,39 @@
         border: 0;
         font-size: 24px;
         margin: 6px 6% 0px 0px;
+        position: relative;
+        transition: all 0.5s ease-in;
+        width: 300px;
 
-        &:hover {
-          color: variables.$white-primary;
+        .icon_search path {
+          &:hover {
+            color: variables.$white-primary;
+          };
+        };
+
+        &:hover span {
+          visibility: visible;
+        };
+
+        span {
+          background-color: black;
+          border-radius: 4px;
+          font-size: 12px;
+          font-weight: 900;
+          padding: 4px;
+          position: absolute;
+          right: 6%;
+          text-align: center;
+          top: 100%;
+          visibility: hidden;
+          width: 100px;
+          z-index: 1;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+          };
         };
       };
     };
@@ -166,7 +228,7 @@
         align-items: center;
         justify-content: flex-start;
         width: 100%;
-        
+
         .icon {
           font-size: 30px;
           margin: 0 4px;
@@ -192,7 +254,7 @@
           font-size: 17px;
           text-align: center;
           width: 124px;
-        
+
           &:hover {
             color: variables.$white-primary;
           };
@@ -210,8 +272,14 @@
         font-size: 24px;
         margin: 6px 50px 0px 0px;
 
-        &:hover {
-          color: variables.$white-primary;
+        .icon_search path {
+          &:hover {
+            color: variables.$white-primary;
+          };
+        };
+
+        span {
+          display: none;
         };
       };
     };
@@ -220,7 +288,7 @@
       align-items: center;
       display: flex;
       width: 100%;
-    
+
       @include mixins.header-layout-filter(false);
 
       .title_container {
@@ -228,12 +296,12 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      
+
       .icon {
         font-size: 30px;
         margin: 0 4px;
       };
-      
+
       .title {
         color: variables.$white-secondary;
         font-family: variables.$font-title;
@@ -254,7 +322,7 @@
           font-size: 17px;
           text-align: center;
           width: 124px;
-        
+
           &:hover {
             color: variables.$white-primary;
           };
@@ -272,8 +340,14 @@
         font-size: 24px;
         margin: 6px 50px 0px 0px;
 
-        &:hover {
-          color: variables.$white-primary;
+        .icon_search path {
+          &:hover {
+            color: variables.$white-primary;
+          };
+        };
+
+        span {
+          display: none;
         };
       };
     };
@@ -305,7 +379,7 @@
         align-items: center;
         justify-content: flex-start;
         width: 100%;
-        
+
         .icon {
           font-size: 30px;
           margin: 0 4px;
@@ -331,7 +405,7 @@
           font-size: 16px;
           text-align: center;
           width: 120px;
-        
+
           &:hover {
             color: variables.$white-primary;
           };
@@ -349,8 +423,14 @@
         font-size: 20px;
         margin: 6px 50px 0px 0px;
 
-        &:hover {
-          color: variables.$white-primary;
+        .icon_search path {
+          &:hover {
+            color: variables.$white-primary;
+          };
+        };
+
+        span {
+          display: none;
         };
       };
     };
@@ -359,7 +439,7 @@
       align-items: center;
       display: flex;
       width: 100%;
-    
+
       @include mixins.header-layout-filter(false);
 
       .title_container {
@@ -367,7 +447,7 @@
         display: flex;
         justify-content: center;
         white-space: nowrap;
-        
+
         .icon {
           font-size: 30px;
           margin: 0 4px;
@@ -394,7 +474,7 @@
           font-size: 16px;
           text-align: center;
           width: 120px;
-        
+
           &:hover {
             color: variables.$white-primary;
           };
@@ -412,11 +492,17 @@
         font-size: 20px;
         margin: 6px 50px 0px 0px;
 
-        &:hover {
-          color: variables.$white-primary;
+        .icon_search path {
+          &:hover {
+            color: variables.$white-primary;
+          };
+        };
+
+        span {
+          display: none;
         };
       };
-    };    
+    };
   };
 };
 
@@ -446,7 +532,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        
+
         .icon {
           font-size: 30px;
           margin: 0 4px;
@@ -472,7 +558,7 @@
           font-size: 14px;
           text-align: center;
           width: 100px;
-        
+
           &:hover {
             color: variables.$white-primary;
           };
@@ -492,8 +578,14 @@
         margin-top: 6px;
         width: 100%;
 
-        &:hover {
-          color: variables.$white-primary;
+        .icon_search path {
+          &:hover {
+            color: variables.$white-primary;
+          };
+        };
+
+        span {
+          display: none;
         };
       };
     };
@@ -503,7 +595,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-    
+
       @include mixins.header-layout-filter(false);
 
       .title_container {
@@ -512,7 +604,7 @@
         justify-content: center;
         width: 100%;
         margin: 0;
-        
+
         .icon {
           font-size: 30px;
           margin: 0 4px;
@@ -538,7 +630,7 @@
           font-size: 14px;
           text-align: center;
           width: 100px;
-        
+
           &:hover {
             color: variables.$white-primary;
           };
@@ -558,8 +650,14 @@
         margin-top: 6px;
         width: 100%;
 
-        &:hover {
-          color: variables.$white-primary;
+        .icon_search path {
+          &:hover {
+            color: variables.$white-primary;
+          };
+        };
+
+        span {
+          display: none;
         };
       };
     };
