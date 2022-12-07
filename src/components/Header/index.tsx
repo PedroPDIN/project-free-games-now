@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-// import { FiSearch } from 'react-icons/fi';
 import { FaSearch } from 'react-icons/fa';
 import { SiGamejolt } from 'react-icons/si';
 import categories from '../../services/GameCategories';

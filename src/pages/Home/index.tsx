@@ -35,6 +35,8 @@ function Home() {
           <Components.CardsGamesLike hasTitle={ false } listGamesLike={ gamesLike.slice(0, 6) } />
         </div>
       </div>
+
+      <Components.Footer />
     </main>
   );
 }
