@@ -8,6 +8,7 @@ function MainRoutes() {
       <Route path="/" element={ <Navigate replace to="/home" /> } />
       <Route path="/home" element={ <Pages.Home /> } />
       <Route path="/search" element={ <Pages.Search /> } />
+      <Route path="/games" element={ <Pages.Games /> } />
     </Routes>
   );
 }

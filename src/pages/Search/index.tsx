@@ -33,6 +33,7 @@ function Search() {
   return (
     <>
       <Components.Header filterGames />
+
       <main className={ style.search_container }>
 
         <section className={ style.filter_container }>
@@ -60,8 +61,9 @@ function Search() {
           <Components.CardsGamesLike listGamesLike={ gamesLike.slice(0, 6) } hasTitle />
         </section>
       </main>
-    </>
 
+      <Components.Footer />
+    </>
   );
 }
 
