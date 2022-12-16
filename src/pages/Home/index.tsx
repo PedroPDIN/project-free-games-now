@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import MainContext from '../../store/Context/Main.Context';
 import * as Components from '../../components';
 
@@ -6,6 +7,8 @@ import style from '../../styles/pages/_home.module.scss';
 
 function Home() {
   const { listGames, gamesLike } = useContext(MainContext);
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -27,7 +30,7 @@ function Home() {
             <Components.CardsGames listGames={ listGames.slice(0, 10) } cardFormat="base" />
 
             <div className={ style.btn_more_games }>
-              <button type="button">
+              <button type="button" onClick={ () => navigate('/games') }>
                 Mais Jogos
               </button>
             </div>

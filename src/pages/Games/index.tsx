@@ -4,12 +4,16 @@ import * as Components from '../../components';
 
 function Games() {
   const { listGames } = useContext(MainContext);
+  const currentYear: number = new Date().getFullYear();
 
   return (
     <>
       <Components.Header filterGames={ false } />
       <main>
-        <h1>Aqui esta a página de games</h1>
+        <div>
+          <h1>{`Principais jogos gratuitos para PC e navegador em ${currentYear}!`}</h1>
+          <span>{`${listGames.length} jogos gratuitos encontrados em nossa lista de jogos!`}</span>
+        </div>
 
         <Components.Pagination
           limitPage={ 20 }

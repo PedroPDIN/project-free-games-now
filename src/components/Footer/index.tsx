@@ -5,7 +5,7 @@ import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import style from '../../styles/components/_footer.module.scss';
 
 function Footer() {
-  const year: number = new Date().getFullYear();
+  const currentYear: number = new Date().getFullYear();
 
   return (
     <footer className={ style.footer_container }>
@@ -24,7 +24,7 @@ function Footer() {
       <hr />
 
       <div className={ style.footer_content_contact }>
-        <span className={ style.year }>{`© ${year}`}</span>
+        <span className={ style.year }>{`© ${currentYear}`}</span>
 
         <div className={ style.links }>
           <a href="https://github.com/pedropdin">
