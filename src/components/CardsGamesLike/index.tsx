@@ -1,21 +1,23 @@
-import React from 'react';
-import { IGame } from '../../interfaces/Game.interface';
+import React, { useContext } from 'react';
+import MainContext from '../../store/Context/Main.Context';
 
 import style from '../../styles/components/_cardsGamesLike.module.scss';
 
 interface Props {
   hasTitle: boolean;
-  listGamesLike: IGame[];
+  limitListGame: number;
 }
 
-function CardsGamesLike({ hasTitle, listGamesLike }: Props) {
+function CardsGamesLike({ hasTitle, limitListGame }: Props) {
+  const { gamesLike } = useContext(MainContext);
+
   return (
     <article>
       <h1 className={ style.title }>Você pode gostar</h1>
 
       {hasTitle ? (
         <div className={ style.card_container_happy_title }>
-          {listGamesLike.map((game) => (
+          {gamesLike.slice(0, limitListGame).map((game) => (
             <a
               key={ game.id }
               href={ game.game_url }
@@ -32,7 +34,7 @@ function CardsGamesLike({ hasTitle, listGamesLike }: Props) {
         </div>
       ) : (
         <div className={ style.card_container_not_title }>
-          {listGamesLike.map((game) => (
+          {gamesLike.slice(0, limitListGame).map((game) => (
             <a
               key={ game.id }
               href={ game.game_url }

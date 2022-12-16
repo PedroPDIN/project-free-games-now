@@ -6,7 +6,7 @@ import * as Components from '../../components';
 import style from '../../styles/pages/_home.module.scss';
 
 function Home() {
-  const { listGames, gamesLike } = useContext(MainContext);
+  const { listGames } = useContext(MainContext);
 
   const navigate = useNavigate();
 
@@ -37,7 +37,7 @@ function Home() {
           </div>
 
           <div className={ style.home_content_cards_like }>
-            <Components.CardsGamesLike hasTitle={ false } listGamesLike={ gamesLike.slice(0, 6) } />
+            <Components.CardsGamesLike hasTitle={ false } limitListGame={ 6 } />
           </div>
         </div>
       </main>
