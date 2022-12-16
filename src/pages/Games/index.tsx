@@ -15,6 +15,8 @@ function Games() {
           <span>{`${listGames.length} jogos gratuitos encontrados em nossa lista de jogos!`}</span>
         </div>
 
+        <Components.RandomGames limitGame={ 3 } />
+
         <Components.Pagination
           limitPage={ 20 }
           currentListGames={ listGames }
