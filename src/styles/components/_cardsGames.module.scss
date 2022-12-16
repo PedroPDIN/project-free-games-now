@@ -133,7 +133,8 @@
         margin: 18px 0px 6px 0px;
 
         h3 {
-          font-size: 0.9rem;
+          color: variables.$white-secondary;
+          font-size: 1.1rem;
           font-weight: 900;
           margin-right: 2px;
           overflow: hidden;
@@ -326,6 +327,7 @@
         margin: 18px 0px 6px 0px;
 
         h3 {
+          color: variables.$white-secondary;
           font-size: 1.1rem;
           font-weight: 900;
           margin-right: 2px;
@@ -518,6 +520,7 @@
         margin: 18px 0px 6px 0px;
 
         h3 {
+          color: variables.$white-secondary;
           font-size: 1.2rem;
           font-weight: 900;
           margin-right: 2px;
@@ -540,7 +543,7 @@
       };
 
       .description {
-        font-size: 1.3rem;
+        font-size: 1rem;
         margin: 2px 0;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -709,6 +712,7 @@
         margin: 18px 0px 6px 0px;
 
         h3 {
+          color: variables.$white-secondary;
           font-size: 1.2rem;
           font-weight: 900;
           margin-right: 2px;
@@ -724,7 +728,7 @@
       };
 
       .description {
-        font-size: 1.3rem;
+        font-size: 1rem;
         margin: 2px 0;
         overflow: hidden;
         text-overflow: ellipsis;
