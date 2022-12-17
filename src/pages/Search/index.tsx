@@ -54,7 +54,10 @@ function Search() {
           </div>
 
         </section>
-        <Components.CardsGames listGames={ searchGame } cardFormat="mini" />
+
+        <section className={ style.search_games_content }>
+          <Components.CardsGames listGames={ searchGame } cardFormat="mini" />
+        </section>
         <section />
 
         <section>
