@@ -30,3 +30,30 @@
   text-align: center;
   width: 50px;
 };
+
+@mixin margin_fireplaces() {
+  // ============================ big monitors ===============================
+  @media (min-width: variables.$breakpoint-lg) {
+    margin-left: 225.5px;
+    margin-right: 224.5px;
+  };
+
+  // ================ notebooks and tablets in landscape mode ================
+  @media (max-width: variables.$breakpoint-lg) {
+    margin-left: 100.5px;
+    margin-right: 100.5px;
+  };
+
+  // ====== tablets in portrait mode and smartphones in landscape mode =======
+  @media (max-width: variables.$breakpoint-md) {
+    margin-left: 80px;
+    margin-right: 80px;
+  };
+
+  // =================== smartphones in portrait mode ========================
+  @media (max-width: variables.$breakpoint-sm) {
+    margin-left: 36px;
+    margin-right: 36px;   
+  };
+
+}

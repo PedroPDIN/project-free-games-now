@@ -20,7 +20,9 @@ function Pagination({ limitPage, currentListGames, layout }: Props) {
 
   return (
     <div className={ style.pagination_container }>
-      <CardsGames cardFormat={ layout } listGames={ currentList } />
+      <div className={ style.cpn_games }>
+        <CardsGames cardFormat={ layout } listGames={ currentList } />
+      </div>
 
       <div className={ style.pagination_content_nav }>
         {currentPage > 0 && (
