@@ -1,0 +1,89 @@
+@use '../_variables.scss';
+@use '../mixins.scss';
+
+// ============================ big monitors ===============================
+@media (min-width: variables.$breakpoint-lg) {
+  .games_container {
+    @include mixins.margin_fireplaces;
+
+    .games_titles_content {
+      margin-bottom: 10px;
+      padding: 0px 10px;
+
+      h1 {
+        color: variables.$font-color-secondary;
+        font-size: 32.7px;
+      };
+
+      span {
+        font-size: 15px;
+      };
+    };
+  };
+};
+
+// ================ notebooks and tablets in landscape mode ================
+@media (max-width: variables.$breakpoint-lg) {
+  .games_container {
+    @include mixins.margin_fireplaces;
+
+    .games_titles_content {
+      margin-bottom: 10px;
+      padding: 0px 10px;
+
+      h1 {
+        color: variables.$font-color-secondary;
+        font-size: 30px;
+      };
+
+      span {
+        font-size: 15px;
+      };
+    };
+  };
+};
+
+// ====== tablets in portrait mode and smartphones in landscape mode =======
+@media (max-width: variables.$breakpoint-md) {
+  .games_container {
+    @include mixins.margin_fireplaces;
+
+    .games_titles_content {
+      margin-bottom: 10px;
+      padding: 0px 10px;
+      text-align: center;
+
+      h1 {
+        color: variables.$font-color-secondary;
+        font-size: 32.7px;
+      };
+
+      span {
+        font-size: 15px;
+      };
+    };
+  };
+};
+
+// =================== smartphones in portrait mode ========================
+@media (max-width: variables.$breakpoint-sm) {
+  .games_container {
+    @include mixins.margin_fireplaces;
+
+    .games_titles_content {
+      margin-bottom: 10px; 
+      padding: 0px 10px;
+      text-align: center;
+
+      
+      h1 {
+        color: variables.$font-color-secondary;
+        font-size: 32.7px;
+      };
+
+      span {
+        font-size: 15px;
+      };
+    };
+  };
+};

@@ -1,11 +1,14 @@
 @use '../_variables.scss';
+@use '../mixins.scss';
 
 // ============================ big monitors ===============================
 @media (min-width: variables.$breakpoint-lg) {
   .search_container {
     .filter_container {
       margin-bottom: 40px;
-
+      padding: 0px 10px;
+      @include mixins.margin_fireplaces;
+      
       .filter_content {
         display: flex;
         align-items: center;
@@ -13,12 +16,11 @@
 
         .icon {
           font-size: 40px;
-          margin: 0px 3px 0px 30px;
+          margin-right: 3px;
         };
 
         .title {
           font-size: 30px;
-          margin-left: 3px;
         };
       };
 
@@ -30,18 +32,21 @@
 
       .input_filter {
         display: flex;
-        margin-left: 60px;
      
         input {
-          background: variables.$color-primary;
+          background: variables.$black;
           border: 0;
           border-radius: 6px;
           color: variables.$color-secondary;
           font-size: 100%;
-          padding: 10px;
-          width: 40%;
+          padding: 12px;
+          width: 60%;
         };
       };
+    };
+
+    .search_games_content {
+      @include mixins.margin_fireplaces;
     };
   };
 }
@@ -51,6 +56,8 @@
   .search_container {
     .filter_container  {
       margin-bottom: 40px;
+      padding: 0px 10px;
+      @include mixins.margin_fireplaces;
 
       .filter_content {
         display: flex;
@@ -59,12 +66,11 @@
 
         .icon {
           font-size: 40px;
-          margin: 0px 3px 0px 26px;
+          margin-right: 3px;
         };
 
         .title {
           font-size: 30px;
-          margin-left: 3px;
         };
       };
 
@@ -76,18 +82,21 @@
 
       .input_filter {
         display: flex;
-        margin-left: 50px;
      
         input {
-          background: variables.$color-primary;
+          background: variables.$black;
           border: 0;
           border-radius: 6px;
           color: variables.$color-secondary;
           font-size: 100%;
-          padding: 10px;
-          width: 50%;
+          padding: 12px;
+          width: 60%;
         };
       };
+    };
+
+    .search_games_content {
+      @include mixins.margin_fireplaces;
     };
   };
 };
@@ -97,20 +106,22 @@
   .search_container {
     .filter_container  {
       margin-bottom: 38px;
+      padding: 0px 10px;
+      @include mixins.margin_fireplaces;
 
       .filter_content {
         display: flex;
         align-items: center;
+        margin: 0;
         width: 100%;
 
         .icon {
           font-size: 40px;
-          margin: 0px 3px 0px 20px;
+          margin-right: 3px;
         };
 
         .title {
           font-size: 30px;
-          margin-left: 3px;
         };
       };
 
@@ -122,18 +133,22 @@
 
       .input_filter {
         display: flex;
-        margin-left: 40px;
+        margin: 0;
 
         input {
-          background: variables.$color-primary;
+          background: variables.$black;
           border: 0;
           border-radius: 6px;
           color: variables.$color-secondary;
           font-size: 100%;
-          padding: 10px;
-          width: 70%;
+          padding: 12px;
+          width: 80%;
         };
       };
+    };
+
+    .search_games_content {
+      @include mixins.margin_fireplaces;
     };
   };
 };
@@ -143,6 +158,8 @@
   .search_container {
     .filter_container  {
       margin-bottom: 32px;
+      @include mixins.margin_fireplaces;
+      padding: 0px 10px;
 
       .filter_content {
         display: flex;
@@ -156,7 +173,6 @@
 
         .title {
           font-size: 20px;
-          margin-left: 3px;
         };
       };
 
@@ -172,15 +188,19 @@
         margin: 0;
 
         input {
-          background: variables.$color-primary;
+          background: variables.$black;
           border: 0;
           border-radius: 6px;
           color: variables.$color-secondary;
           font-size: 100%;
-          padding: 10px;
-          width: 90%;
+          padding: 12px;
+          width: 100%;
         };
       };
+    };
+
+    .search_games_content {
+      @include mixins.margin_fireplaces;
     };
   };
 };

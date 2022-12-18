@@ -10,7 +10,7 @@ function Search() {
   const [searchInput, setSearchInput] = useState<string>('');
   const [searchGame, setSearchGame] = useState<IGame[] | []>([]);
 
-  const { listGames, gamesLike } = useContext(MainContext);
+  const { listGames } = useContext(MainContext);
 
   const handleChangeGame = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setSearchInput(e.target.value);
@@ -33,6 +33,7 @@ function Search() {
   return (
     <>
       <Components.Header filterGames />
+
       <main className={ style.search_container }>
 
         <section className={ style.filter_container }>
@@ -53,15 +54,19 @@ function Search() {
           </div>
 
         </section>
-        <Components.CardsGames listGames={ searchGame } cardFormat="mini" />
+
+        <section className={ style.search_games_content }>
+          <Components.CardsGames listGames={ searchGame } cardFormat="mini" />
+        </section>
         <section />
 
         <section>
-          <Components.CardsGamesLike listGamesLike={ gamesLike.slice(0, 6) } hasTitle />
+          <Components.CardsGamesLike limitListGame={ 6 } hasTitle />
         </section>
       </main>
-    </>
 
+      <Components.Footer />
+    </>
   );
 }
 

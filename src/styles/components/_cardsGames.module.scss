@@ -18,7 +18,7 @@
       overflow: hidden;
       margin: 10px 0px;
       transition: all 0.2s ease-in-out;
-      
+
       &:hover {
         @include mixins.hover_card_animation();
       };
@@ -100,25 +100,30 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-left: 70px;
+
+    // background: blue;
+    // width: 80%;
+    justify-content: space-between;
+    padding: 0px 10px;
+    // margin-left: 70px;
+
 
     .card_content_mini {
       align-items: center;
-      border-radius: 6px;
+      border-radius: 4px; // alterado
       box-shadow: 0px 0px 30px 8px variables.$dark;
       display: flex;
       flex-direction: column;
-      margin: 10px 10px 16px 10px;
+      margin: 10px 0px 16px 0px !important; // alterado no esquerdo e no direito
+      overflow: hidden;
       transition: all 0.2s ease-in-out;
-      width: 22%;
+      width: 24%; // alterado
 
       &:hover {
         @include mixins.hover_card_animation();
       };
 
       img {
-        border-radius: 10px 10px 0px 0px;
         width: 100%;
       };
 
@@ -133,7 +138,8 @@
         margin: 18px 0px 6px 0px;
 
         h3 {
-          font-size: 0.9rem;
+          color: variables.$white-secondary;
+          font-size: 1.1rem;
           font-weight: 900;
           margin-right: 2px;
           overflow: hidden;
@@ -197,7 +203,7 @@
 // ================ notebooks and tablets in landscape mode ================
 @media (max-width: variables.$breakpoint-lg) {
   // base layout ====================>
-  .card_container_base { 
+  .card_container_base {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -292,18 +298,20 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    margin: 0 48px;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 10px;
 
     .card_content_mini {
       align-items: center;
-      border-radius: 6px;
+      border-radius: 4px;
       box-shadow: 0px 0px 30px 8px variables.$dark;
       display: flex;
       flex-direction: column;
-      margin: 10px 10px 16px 10px;
+      margin: 10px 0px 14px 0px;
+      overflow: hidden;
       transition: all 0.2s ease-in-out;
-      width: 30%;
+      width: 32%;
 
       &:hover {
         @include mixins.hover_card_animation();
@@ -311,7 +319,6 @@
 
 
       img {
-        border-radius: 6px 6px 0px 0px;
         width: 100%;
       };
 
@@ -326,6 +333,7 @@
         margin: 18px 0px 6px 0px;
 
         h3 {
+          color: variables.$white-secondary;
           font-size: 1.1rem;
           font-weight: 900;
           margin-right: 2px;
@@ -485,25 +493,26 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    margin: 0 40px;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0px 10px;
 
     .card_content_mini {
       align-items: center;
-      border-radius: 6px;
+      border-radius: 4px;
       box-shadow: 0px 0px 30px 8px variables.$dark;
       display: flex;
       flex-direction: column;
-      margin: 10px 10px 16px 10px;
+      margin: 10px 0px 16px 0px;
+      overflow: hidden;
       transition: all 0.2s ease-in-out;
-      width: 42%;
+      width: 32%;
 
       &:hover {
         @include mixins.hover_card_animation();
       };
 
       img {
-        border-radius: 6px 6px 0px 0px;
         width: 100%;
       };
 
@@ -518,6 +527,7 @@
         margin: 18px 0px 6px 0px;
 
         h3 {
+          color: variables.$white-secondary;
           font-size: 1.2rem;
           font-weight: 900;
           margin-right: 2px;
@@ -540,7 +550,7 @@
       };
 
       .description {
-        font-size: 1.3rem;
+        font-size: 1rem;
         margin: 2px 0;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -583,7 +593,7 @@
   // base layout ====================>
   .card_container_base {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 
     .card_content_base {
       border-radius: 4px;
@@ -677,24 +687,24 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    justify-content: center !important;
     margin: 0;
-    width: 100%;
-    
+
     .card_content_mini {
       align-items: center;
-      border-radius: 6px;
+      border-radius: 4px;
       box-shadow: 0px 0px 30px 8px variables.$dark;
       display: flex;
-      flex-direction: column;
+      flex-direction: column; 
+      overflow: hidden;
       transition: all 0.2s ease-in-out;
-      width: 84%;
+      width: 100%;
 
       &:hover {
         @include mixins.hover_card_animation();
       };
 
       img {
-        border-radius: 6px 6px 0px 0px;
         width: 100%;
       };
 
@@ -709,6 +719,7 @@
         margin: 18px 0px 6px 0px;
 
         h3 {
+          color: variables.$white-secondary;
           font-size: 1.2rem;
           font-weight: 900;
           margin-right: 2px;
@@ -724,7 +735,7 @@
       };
 
       .description {
-        font-size: 1.3rem;
+        font-size: 1rem;
         margin: 2px 0;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -761,4 +772,3 @@
     };
   }; // end ===========>
 };
-  
