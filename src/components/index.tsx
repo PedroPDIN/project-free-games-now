@@ -3,6 +3,7 @@ import CardsGames from './CardsGames';
 import CardsGamesLike from './CardsGamesLike';
 import Pagination from './Pagination';
 import RandomGames from './RandomGames';
+import NavigationGames from './NavigationGames';
 import Footer from './Footer';
 
 export {
@@ -11,5 +12,6 @@ export {
   CardsGamesLike,
   Pagination,
   RandomGames,
+  NavigationGames,
   Footer,
 };

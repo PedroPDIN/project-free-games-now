@@ -6,4 +6,17 @@ const getAllGames = () => {
   return allGames;
 };
 
-export default getAllGames;
+const getAllGamesCategory = (category: string) => {
+  const allGames = requestApi.get<IGame[]>('/games', {
+    params: {
+      category,
+    },
+  });
+
+  return allGames;
+};
+
+export {
+  getAllGames,
+  getAllGamesCategory,
+};

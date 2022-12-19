@@ -19,6 +19,10 @@ function Games() {
 
         <Components.RandomGames limitGame={ 3 } />
 
+        <Components.NavigationGames />
+
+        <hr />
+
         <Components.Pagination
           limitPage={ 20 }
           currentListGames={ listGames }

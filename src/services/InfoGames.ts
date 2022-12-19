@@ -46,7 +46,7 @@ const categories: string[] = [
   'mmorts',
 ];
 
-const platforms = ['pc', 'browser'];
+const platforms: string[] = ['pc', 'browser'];
 
 export {
   categories,

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 import { SiGamejolt } from 'react-icons/si';
-import categories from '../../services/GameCategories';
+import MainContext from '../../store/Context/Main.Context';
+import { categories, platforms } from '../../services/InfoGames';
 
 import style from '../../styles/components/_header.module.scss';
 
@@ -11,6 +12,13 @@ interface Props {
 }
 
 function Header({ filterGames }: Props) {
+  const {
+    currentCategory,
+    setCurrentCategory,
+    currentPlatform,
+    setCurrentPlatform,
+  } = useContext(MainContext);
+
   const tenCategories: string[] = categories.slice(0, 10);
   const navigate = useNavigate();
 
@@ -28,18 +36,26 @@ function Header({ filterGames }: Props) {
             </Link>
 
             <div className={ style.selects_container }>
-              <select>
-                <option disabled selected>Categorias</option>
+              <select
+                value={ currentCategory }
+                onChange={ (e) => setCurrentCategory(e.target.value) }
+              >
+                <option selected>Categorias</option>
                 {tenCategories.map((category, index) => (
                   // eslint-disable-next-line react/no-array-index-key
                   <option key={ index } value={ category }>{category}</option>
                 ))}
               </select>
 
-              <select>
+              <select
+                value={ currentPlatform }
+                onChange={ (e) => setCurrentPlatform(e.target.value) }
+              >
                 <option disabled selected>Plataforma</option>
-                <option value="pc">PC</option>
-                <option value="browser">Browser</option>
+                {platforms.map((platform, index) => (
+                  // eslint-disable-next-line react/no-array-index-key
+                  <option key={ index } value={ platform }>{ platform }</option>
+                ))}
               </select>
             </div>
 
