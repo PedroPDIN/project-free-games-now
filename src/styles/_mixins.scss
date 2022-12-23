@@ -57,3 +57,272 @@
   };
 
 }
+
+@mixin filter_games_style() {
+// ============================ big monitors ===============================
+  @media (min-width: variables.$breakpoint-lg) {
+    display: flex;
+    flex-direction: column;
+      
+    div:nth-child(1) {
+      align-self: center;
+      display: flex;
+
+      span {
+        margin-right: 0.25rem !important;
+        font-size: 16px;
+      };
+        
+      button {
+        align-self: center;
+        background: none;
+        display: flex;
+        border: 0;  
+        color: variables.$font-color-secondary;
+        font-size: 16px;
+        
+        svg {
+          font-size: 24px;
+
+          path {
+            color: variables.$blue-primary;
+          };
+        };
+      };
+    };
+
+    div:nth-child(2) { // content platform and category
+      background-color: variables.$color-options;
+      border-radius: 4px; 
+      margin-top: 24px;
+      max-height: 200px;
+      overflow: scroll;
+      position: absolute;
+      width: 11em;
+        
+      ul {
+        li:nth-child(1) {
+          border-bottom: 0.8px solid variables.$break-color-secondary;
+          color: variables.$font-color-primary !important;
+          font-size: 0.7rem !important;
+          padding: 0.5rem 1.5rem !important;
+
+          &:hover {
+            background: none !important;
+          };
+        };
+
+        li {
+          color: variables.$font-color-options;
+          font-size: 1rem;
+          list-style: none;
+          padding: 4px 24px;
+
+          &:hover {
+            background-color: variables.$black-dark
+          };
+        };
+      };
+    };    
+  };
+
+// ================ notebooks and tablets in landscape mode ================
+  @media (max-width: variables.$breakpoint-lg) {
+    display: flex;
+    flex-direction: column;
+      
+    div:nth-child(1) {
+      align-self: center;
+      display: flex;
+
+      span {
+        margin-right: 0.25rem !important;
+        font-size: 16px;
+      };
+        
+      button {
+        align-self: center;
+        background: none;
+        display: flex;
+        border: 0;  
+        color: variables.$font-color-secondary;
+        font-size: 16px;
+        
+        svg {
+          font-size: 24px;
+
+          path {
+            color: variables.$blue-primary;
+          };
+        };
+      };
+    };
+
+    div:nth-child(2) { // content platform and category
+      background-color: variables.$color-options;
+      border-radius: 4px; 
+      margin-top: 24px;
+      max-height: 200px;
+      overflow: scroll;
+      position: absolute;
+      width: 11em;
+        
+      ul {
+        li:nth-child(1) {
+          border-bottom: 0.8px solid variables.$break-color-secondary;
+          color: variables.$font-color-primary !important;
+          font-size: 0.7rem !important;
+          padding: 0.5rem 1.5rem !important;
+
+          &:hover {
+            background: none !important;
+          };
+        };
+
+        li {
+          color: variables.$font-color-options;
+          font-size: 1rem;
+          list-style: none;
+          padding: 4px 24px;
+
+          &:hover {
+            background-color: variables.$black-dark
+          };
+        };
+      };
+    };    
+  };
+
+// ====== tablets in portrait mode and smartphones in landscape mode =======
+  @media (max-width: variables.$breakpoint-md) {
+    display: flex;
+    flex-direction: column;
+      
+    div:nth-child(1) {
+      align-self: center;
+      display: flex;
+
+      span {
+        margin-right: 0.25rem !important;
+        font-size: 16px;
+      };
+        
+      button {
+        align-self: center;
+        background: none;
+        display: flex;
+        border: 0;  
+        color: variables.$font-color-secondary;
+        font-size: 16px;
+        
+        svg {
+          font-size: 24px;
+
+          path {
+            color: variables.$blue-primary;
+          };
+        };
+      };
+    };
+
+    div:nth-child(2) { // content platform and category
+      background-color: variables.$color-options;
+      border-radius: 4px; 
+      margin-top: 24px;
+      max-height: 196px;
+      overflow: scroll;
+      position: absolute;
+      width: 11em;
+        
+      ul {
+        li:nth-child(1) {
+          border-bottom: 0.8px solid variables.$break-color-secondary;
+          color: variables.$font-color-primary !important;
+          font-size: 0.7rem !important;
+          padding: 0.5rem 1.5rem !important;
+
+          &:hover {
+            background: none !important;
+          };
+        };
+
+        li {
+          color: variables.$font-color-options;
+          font-size: 15px;
+          list-style: none;
+          padding: 4px 24px;
+
+          &:hover {
+            background-color: variables.$black-dark
+          };
+        };
+      };
+    };  
+  };
+
+// =================== smartphones in portrait mode ========================
+  @media (max-width: variables.$breakpoint-sm) {
+    display: flex;
+    flex-direction: column;
+      
+    div:nth-child(1) {
+      align-self: center;
+      display: flex;
+
+      span {
+        margin-right: 0.25rem !important;
+        font-size: 16px;
+      };
+        
+      button {
+        align-self: center;
+        background: none;
+        display: flex;
+        border: 0;  
+        color: variables.$font-color-secondary;
+        font-size: 16px;
+        
+        svg {
+          font-size: 24px;
+
+          path {
+            color: variables.$blue-primary;
+          };
+        };
+      };
+    };
+
+    div:nth-child(2) { // content platform and category
+      background-color: variables.$color-options;
+      border-radius: 4px; 
+      margin-top: 24px;
+      max-height: 196px;
+      overflow: scroll;
+      position: absolute;
+      width: 11em;
+        
+      ul {
+        li:nth-child(1) {
+          border-bottom: 0.8px solid variables.$break-color-secondary;
+          color: variables.$font-color-primary !important;
+          font-size: 0.7rem !important;
+          padding: 0.5rem 1.5rem !important;
+          
+          &:hover {
+            background: none !important;
+          };
+        };
+        li {
+          color: variables.$font-color-options;
+          font-size: 15px;
+          list-style: none;
+          padding: 4px 24px;
+          
+          &:hover {
+            background-color: variables.$black-dark
+          };
+        };
+      };
+    };
+  };
+};

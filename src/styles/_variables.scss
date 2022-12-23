@@ -6,13 +6,14 @@ $color-base-page: #272b30;
 $color-primary: #32383e;
 $color-secondary: #7a8288;
 $break-color-primary: rgba(94,84,84,.1);
+$break-color-secondary: rgba(8, 8, 8, 0.1);
 $dark: #272b30;
 $black: rgb(8, 8, 8);
 $black-dark: #1c1e22;
 $blue-primary: #4799eb;
 $white-primary: #fff;
 $white-secondary: rgb(190, 189, 189);
-
+$color-options: #3a3f44;
 $background-image-home: "https://www.freetogame.com/assets/images/paladins.png";
 
 // breakpoints
@@ -23,6 +24,7 @@ $breakpoint-lg: 1200px;
 // font styles
 $font-color-primary: #7a8288;
 $font-color-secondary: #e9ecef;
+$font-color-options: #AAAAAA;
 $font-dark: #272b30;
 $font-title: 'Shadows Into Light', serif;
 $font-pattern: 'Open Sans', serif;

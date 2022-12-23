@@ -19,6 +19,12 @@
         font-size: 15px;
       };
     };
+
+    hr {
+      border: 0;
+      border-top: 2px solid variables.$break-color-primary;
+      margin: 10px 6px; 
+    };
   };
 };
 
@@ -39,6 +45,13 @@
       span {
         font-size: 15px;
       };
+    };
+
+    hr {
+      border: 0;
+      border-top: 2px solid variables.$break-color-primary;
+      margin: 10px 6px;
+      
     };
   };
 };
@@ -62,6 +75,12 @@
         font-size: 15px;
       };
     };
+
+    hr {
+      border: 0;
+      border-top: 2px solid variables.$break-color-primary;
+      margin: 10px 6px;
+    };
   };
 };
 
@@ -84,6 +103,12 @@
       span {
         font-size: 15px;
       };
+    };
+
+    hr {
+      border: 0;
+      border-top: 2px solid variables.$break-color-primary;
+      margin: 10px 6px;
     };
   };
 };

@@ -2,20 +2,32 @@ import React, { useState } from 'react';
 import { TiArrowSortedDown, TiArrowSortedUp } from 'react-icons/ti';
 import { platforms, categories } from '../../services/InfoGames';
 
+import style from '../../styles/components/_navigationGames.module.scss';
+
 function NavigationGames() {
   const [boolOpenClosePlatform, setBoolOpenClosePlatform] = useState<boolean>(false);
   const [boolOpenCloseCategory, setBoolOpenCloseCategory] = useState<boolean>(false);
 
+  const onChangePlatform = () => {
+    setBoolOpenClosePlatform(!boolOpenClosePlatform);
+    setBoolOpenCloseCategory(false);
+  };
+
+  const onChangeCategory = () => {
+    setBoolOpenCloseCategory(!boolOpenCloseCategory);
+    setBoolOpenClosePlatform(false);
+  };
+
   return (
-    <nav>
-      <div>
+    <nav className={ style.nav_games_container }>
+      <div className={ style.nav_platform_content }>
         <div>
-          <span>Plataforma</span>
+          <span>Plataforma: </span>
           <button
             type="button"
-            onClick={ () => setBoolOpenClosePlatform(!boolOpenClosePlatform) }
+            onClick={ onChangePlatform }
           >
-            Todas as Plataformas
+            Todas
             {boolOpenClosePlatform ? <TiArrowSortedUp /> : <TiArrowSortedDown />}
           </button>
         </div>
@@ -23,6 +35,7 @@ function NavigationGames() {
         <div>
           {boolOpenClosePlatform && (
             <ul>
+              <li>Navegue por Plataforma:</li>
               {platforms.map((platform) => (
                 <li>{ platform }</li>
               ))}
@@ -31,14 +44,14 @@ function NavigationGames() {
         </div>
       </div>
 
-      <div>
+      <div className={ style.nav_category_content }>
         <div>
-          <span>Categorias</span>
+          <span>Categorias: </span>
           <button
             type="button"
-            onClick={ () => setBoolOpenCloseCategory(!boolOpenCloseCategory) }
+            onClick={ onChangeCategory }
           >
-            Todas as Categorias
+            Todas
             {boolOpenCloseCategory ? <TiArrowSortedUp /> : <TiArrowSortedDown />}
           </button>
         </div>
@@ -46,6 +59,7 @@ function NavigationGames() {
         <div>
           {boolOpenCloseCategory && (
             <ul>
+              <li>Navegue por Categoria:</li>
               {categories.map((category) => (
                 <li>{ category }</li>
               ))}
